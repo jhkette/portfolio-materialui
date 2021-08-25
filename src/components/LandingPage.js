@@ -10,6 +10,9 @@ import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardMedia from "@material-ui/core/CardMedia"
 
 import CallToAction from "./ui/CallToAction";
 
@@ -23,6 +26,7 @@ import background from "../assets/computer.png";
 import backgroundSmall from "../assets/computer_small.png";
 import wave from "../assets/wave.svg";
 import waveS from "../assets/wave_small.svg";
+import reptile from "../assets/contemplative-reptile.jpeg"
 
 const useStyles = makeStyles((theme) => ({
   animation: {
@@ -112,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "6em",
     paddingBottom: "6em",
     backgroundColor: "#2176BD",
-    
+
     [theme.breakpoints.down("sm")]: {
       paddingTop: "5em",
       paddingBottom: "2em",
@@ -167,6 +171,17 @@ const useStyles = makeStyles((theme) => ({
     height: "30em",
     width: "100%",
   },
+  cardContainer: {
+    height: "40em",
+    backgroundColor: "#C1E6FEAA",
+    paddingTop: "3em"
+
+  },
+  cardItem:{
+    height: "18em",
+    backgroundColor: "white",
+    width: "15em"
+  }
 }));
 
 export default function LandingPage(props) {
@@ -176,14 +191,6 @@ export default function LandingPage(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: false,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   // for grid info see https://material-ui.com/components/grid/
   // a grid system that uses flexbox
@@ -252,7 +259,7 @@ export default function LandingPage(props) {
               <img
                 src={backgroundSmall}
                 style={{
-                  height: "380px",
+                  height: "360px",
                   marginTop: "4rem",
                   position: "absolute",
                   top: "6rem",
@@ -269,8 +276,7 @@ export default function LandingPage(props) {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item
-      >
+      <Grid item>
         {" "}
         {/*-----Custom Software Block-----*/}
         <Grid
@@ -278,16 +284,26 @@ export default function LandingPage(props) {
           direction="row"
           justify={matchesSM ? "center" : undefined}
           className={classes.serviceContainer}
-          style={{padding: "2em"}}
+          style={{ padding: "2em" }}
         >
-          <Grid
-            item        
-          >
-            <Typography variant="h4" style={matchesXS ? {textAlign: "left"} : {}}>Custom Software Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle} style={matchesXS ? {textAlign: "left"} : {}}>
+          <Grid item>
+            <Typography
+              variant="h4"
+              style={matchesXS ? { textAlign: "left" } : {}}
+            >
+              Custom Software Development
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              className={classes.subtitle}
+              style={matchesXS ? { textAlign: "left" } : {}}
+            >
               Save Energy. Save Time. Save Money.
             </Typography>
-            <Typography variant="subtitle1" style={matchesXS ? {textAlign: "left"} : {}}>
+            <Typography
+              variant="subtitle1"
+              style={matchesXS ? { textAlign: "left" } : {}}
+            >
               Complete digital solutions, from investigation to{" "}
               <span className={classes.specialText}>celebration.</span>
             </Typography>
@@ -314,7 +330,7 @@ export default function LandingPage(props) {
               className={classes.icon}
               alt="custom software icon"
               src={customSoftwareIcon}
-              style={{marginLeft: matchesXS ? "3rem" : undefined}}
+              style={{ marginLeft: matchesXS ? "3rem" : undefined }}
             />
           </Grid>
         </Grid>
@@ -332,7 +348,7 @@ export default function LandingPage(props) {
             item
             style={{
               textAlign: matchesSM ? "center" : undefined,
-              width: matchesSM ? undefined : "35em"
+              width: matchesSM ? undefined : "35em",
             }}
           >
             <Typography variant="h4">iOS/Android App Development</Typography>
@@ -384,7 +400,7 @@ export default function LandingPage(props) {
             item
             style={{
               marginLeft: matchesSM ? 0 : "5em",
-              textAlign: matchesSM ? "center" : undefined
+              textAlign: matchesSM ? "center" : undefined,
             }}
           >
             <Typography variant="h4">Custom Software Development</Typography>
@@ -431,13 +447,12 @@ export default function LandingPage(props) {
           direction="row"
           justify={matchesSM ? "center" : "flex-end"}
           className={classes.serviceContainer}
-          
         >
           <Grid
             item
             style={{
               textAlign: matchesSM ? "center" : undefined,
-              width: matchesSM ? undefined : "35em"
+              width: matchesSM ? undefined : "35em",
             }}
           >
             <Typography variant="h4">Website Development</Typography>
@@ -473,6 +488,75 @@ export default function LandingPage(props) {
               width="250em"
             />
           </Grid>
+        </Grid>
+      </Grid>
+      <Grid item>
+      <h2 style={{display: "block", fontSize: "2em", textAlign: "center" }}>Projects</h2>
+      <Grid container direction="row" justifyContent="space-around" className={classes.cardContainer}>
+        
+             
+                <Card className={classes.cardItem}>
+                <CardContent>
+                 <p>Hello</p>
+                </CardContent>
+                <CardActions>
+        <Button size="small" color="primary">
+          Share
+        </Button>
+       
+      </CardActions>
+                </Card>
+
+              
+              
+                <Card className={classes.cardItem}>
+                <CardActionArea>
+        <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
+          height="140"
+          image={reptile}
+          title="Contemplative Reptile"
+        />
+                <CardContent>
+                 <p>Hello</p>
+                </CardContent>
+                </CardActionArea>
+                <CardActions>
+        <Button size="small" color="primary">
+          Share
+        </Button>
+       
+      </CardActions>
+                </Card>
+
+            
+            
+                <Card className={classes.cardItem}>
+                <CardContent>
+                 <p>Hello</p>
+                </CardContent>
+                <CardActions>
+        <Button size="small" color="primary">
+          Share
+        </Button>
+       
+      </CardActions>
+                </Card>
+
+                <Card className={classes.cardItem}>
+                <CardContent>
+                 <p>Hello</p>
+                </CardContent>
+                <CardActions>
+        <Button size="small" color="primary">
+          Share
+        </Button>
+       
+      </CardActions>
+                </Card>
+                
+            
         </Grid>
       </Grid>
       <Grid item>
