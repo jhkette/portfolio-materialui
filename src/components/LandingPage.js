@@ -12,7 +12,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardMedia from "@material-ui/core/CardMedia"
+import CardMedia from "@material-ui/core/CardMedia";
 
 import CallToAction from "./ui/CallToAction";
 
@@ -26,7 +26,7 @@ import background from "../assets/computer.png";
 import backgroundSmall from "../assets/computer_small.png";
 import wave from "../assets/wave.svg";
 import waveS from "../assets/wave_small.svg";
-import reptile from "../assets/contemplative-reptile.jpeg"
+import reptile from "../assets/contemplative-reptile.jpeg";
 
 const useStyles = makeStyles((theme) => ({
   animation: {
@@ -37,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       maxWidth: "30em",
     },
+  },
+  main:{
+    position: "relative",
+    top: "-65px"
   },
   estimateButton: {
     ...theme.typography.estimate,
@@ -172,16 +176,15 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   cardContainer: {
-    height: "40em",
-    backgroundColor: "#C1E6FEAA",
-    paddingTop: "3em"
-
+    minHeight: "45em",
+    backgroundColor: "#39B54A",
+    padding: "2em 0",
   },
-  cardItem:{
+  cardItem: {
     height: "18em",
     backgroundColor: "white",
-    width: "15em"
-  }
+    width: "15em",
+  },
 }));
 
 export default function LandingPage(props) {
@@ -191,7 +194,6 @@ export default function LandingPage(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
-
   // for grid info see https://material-ui.com/components/grid/
   // a grid system that uses flexbox
   //  the api is here https://material-ui.com/api/grid/
@@ -199,7 +201,7 @@ export default function LandingPage(props) {
   // <Grid container justify="flex-end" alignItems="center" direction="row"> -- this is the container
 
   return (
-    <Grid container direction="column">
+    <Grid container direction="column" className={classes.main}>
       <Grid item>
         {" "}
         {/*-----Hero Block-----*/}
@@ -259,8 +261,8 @@ export default function LandingPage(props) {
               <img
                 src={backgroundSmall}
                 style={{
-                  height: "360px",
-                  marginTop: "4rem",
+                  height: "280px",
+                  marginTop: "6.9rem",
                   position: "absolute",
                   top: "6rem",
                   left: "12rem",
@@ -270,7 +272,7 @@ export default function LandingPage(props) {
             ) : (
               <img
                 src={background}
-                style={{ height: "390px", marginTop: "2rem" }}
+                style={{ height: "355px", marginTop: "2rem" }}
               />
             )}
           </Grid>
@@ -439,7 +441,7 @@ export default function LandingPage(props) {
         </Grid>
       </Grid>
 
-      <Grid item>
+      <Grid item >
         {" "}
         {/*-----Websites Block-----*/}
         <Grid
@@ -490,73 +492,81 @@ export default function LandingPage(props) {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
-      <h2 style={{display: "block", fontSize: "2em", textAlign: "center" }}>Projects</h2>
-      <Grid container direction="row" justifyContent="space-around" className={classes.cardContainer}>
-        
-             
-                <Card className={classes.cardItem}>
-                <CardContent>
-                 <p>Hello</p>
-                </CardContent>
-                <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-       
-      </CardActions>
-                </Card>
+      <Grid item style={{backgroundColor: "#39B54A"}}>
+      <Typography
+              variant="h2"
+              align="center"
+              style={
+                matchesXS
+                  ? {
+                      fontSize: "1.75rem",
+                      textAlign: "left",
+                      marginLeft: "1rem",
+                    }
+                  : {}
+              }
+            >
+          Projects
+        </Typography>
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-around"
+          alignItems="center"
+          className={classes.cardContainer}
+        >
+          <Card className={classes.cardItem}>
+            <CardContent>
+              <p>Hello</p>
+            </CardContent>
+            <CardActions>
+              <Button size="small" color="primary">
+                View
+              </Button>
+            </CardActions>
+          </Card>
 
-              
-              
-                <Card className={classes.cardItem}>
-                <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image={reptile}
-          title="Contemplative Reptile"
-        />
-                <CardContent>
-                 <p>Hello</p>
-                </CardContent>
-                </CardActionArea>
-                <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-       
-      </CardActions>
-                </Card>
+          <Card className={classes.cardItem}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="140"
+                image={reptile}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <p>Hello</p>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                View
+              </Button>
+            </CardActions>
+          </Card>
 
-            
-            
-                <Card className={classes.cardItem}>
-                <CardContent>
-                 <p>Hello</p>
-                </CardContent>
-                <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-       
-      </CardActions>
-                </Card>
+          <Card className={classes.cardItem}>
+            <CardContent>
+              <p>Hello</p>
+            </CardContent>
+            <CardActions>
+              <Button size="small" color="primary">
+                View
+              </Button>
+            </CardActions>
+          </Card>
 
-                <Card className={classes.cardItem}>
-                <CardContent>
-                 <p>Hello</p>
-                </CardContent>
-                <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-       
-      </CardActions>
-                </Card>
-                
-            
+          <Card className={classes.cardItem}>
+            <CardContent>
+              <p>Hello</p>
+            </CardContent>
+            <CardActions>
+              <Button size="small" color="primary">
+                View
+              </Button>
+            </CardActions>
+          </Card>
         </Grid>
       </Grid>
       <Grid item>

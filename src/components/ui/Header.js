@@ -111,11 +111,14 @@ const useStyles = makeStyles(theme => ({
   },
   appbar: {
     zIndex: theme.zIndex.modal + 1,
-    backgroundColor: "white",
+    display: "inline-block",
     color: "#1a1a1a",
-    borderBottom: "1px solid #ddd",
-    boxShadow: "2px 2px 2px #ededed",
+   
     padding: "5px 0",
+    width: "auto",
+    marginRight: "auto",
+    backgroundColor: "rgba(0, 0, 255, 0)",
+
     [theme.breakpoints.down("md")]: {
       padding: "0"
     },
@@ -338,7 +341,7 @@ export default function Header(props) {
   return (
     <React.Fragment>
       <ElevationScroll {...props}>
-        <AppBar position="fixed" className={classes.appbar}>
+        <AppBar position="absolute"  className={classes.appbar}>
           <Toolbar disableGutters>
             {/* setvalue to 0 to ensure that active tab is returned to Home and disableRipple*/}
           
