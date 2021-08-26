@@ -37,6 +37,14 @@ export default createMuiTheme({
       textTransform: "none",
       color: "white"
     },
+    h1:{
+      fontFamily: "Raleway",
+      fontWeight: 700,
+      fontSize: "2.55rem",
+      color: darkGrey,
+      lineHeight: 1.5,
+
+    },
     h2: {
       fontFamily: "Raleway",
       fontWeight: 700,
@@ -59,12 +67,12 @@ export default createMuiTheme({
     h6: {
       fontWeight: 500,
       fontFamily: "Raleway",
-      color: arcBlue
+      color: "white"
     },
     subtitle1: {
       fontSize: "1.25rem",
-      fontWeight: 300,
-      color: arcGrey
+      fontWeight: 400,
+      color: 'white'
     },
     subtitle2: {
       color: "white",

@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     // A background-image that will not scroll with the page (fixed):
     backgroundAttachment: "fixed",
     backgroundRepeat: "no-repeat",
-    height: "60em",
+    height: "40em",
     width: "100%",
     [theme.breakpoints.down("md")]: {
       backgroundImage: `url(${mobileBackground})`,

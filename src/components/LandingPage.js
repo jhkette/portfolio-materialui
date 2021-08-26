@@ -26,7 +26,10 @@ import background from "../assets/computer.png";
 import backgroundSmall from "../assets/computer_small.png";
 import wave from "../assets/wave.svg";
 import waveS from "../assets/wave_small.svg";
-import reptile from "../assets/contemplative-reptile.jpeg";
+import reptile from "../assets/lights.jpg";
+import lights from "../assets/lights2.png";
+import table from "../assets/table.jpg"
+import gradient from "../assets/gradient.png"
 
 const useStyles = makeStyles((theme) => ({
   animation: {
@@ -78,8 +81,9 @@ const useStyles = makeStyles((theme) => ({
   learnButton: {
     ...theme.typography.learnButton,
     fontSize: "0.7rem",
-    height: 25,
-    padding: 2,
+    height: "40px",
+    width: "120px",
+    marginTop: "1em",
     [theme.breakpoints.down("sm")]: {
       marginBottom: "2em",
     },
@@ -131,7 +135,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   projects:{
-    backgroundColor: theme.palette.common.green,
+    backgroundColor: theme.palette.common.blue,
     padding: "2em"
   },
   revolutionBackground: {
@@ -226,7 +230,7 @@ export default function LandingPage(props) {
           here the breakpoints xs */}
           <Grid xs item className={classes.heroTextContainer}>
             <Typography
-              variant="h2"
+              variant="h1"
               align="center"
               style={
                 matchesXS
@@ -271,7 +275,7 @@ export default function LandingPage(props) {
                 src={backgroundSmall}
                 style={{
                   height: "280px",
-                  marginTop: "6.9rem",
+                  marginTop: "7.9rem",
                   position: "absolute",
                   top: "6rem",
                   left: "12rem",
@@ -281,12 +285,120 @@ export default function LandingPage(props) {
             ) : (
               <img
                 src={background}
-                style={{ height: "355px", marginTop: "2rem" }}
+                style={{ height: "385px", marginTop: "3.5rem" }}
               />
             )}
           </Grid>
         </Grid>
       </Grid>
+      <Grid item className={classes.projects} >
+      <Typography
+              variant="h2"
+              align="left"
+              style={
+                matchesXS
+                  ? {
+                      fontSize: "1.75rem",
+                      marginLeft: "2rem",
+                    }
+                  : {marginLeft: "2rem",}
+              }
+            >
+          Projects
+        </Typography>
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-around"
+          alignItems="center"
+          className={classes.cardContainer}
+        >
+        <Card className={classes.cardItem}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={reptile}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <p>Hello</p>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+
+
+          <Card className={classes.cardItem}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={table}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <p>Hello</p>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+
+
+          <Card className={classes.cardItem}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={lights}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <p>Hello</p>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+
+
+          <Card className={classes.cardItem}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={gradient}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <p>Hello</p>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+
+        </Grid>
+      </Grid>
+  
       <Grid item>
         {" "}
         {/*-----Custom Software Block-----*/}
@@ -346,6 +458,7 @@ export default function LandingPage(props) {
           </Grid>
         </Grid>
       </Grid>
+      
       <Grid item>
         {" "}
         {/*-----iOS/Android Block-----*/}
@@ -399,84 +512,7 @@ export default function LandingPage(props) {
         </Grid>
       </Grid>
       
-      <Grid item className={classes.projects} >
-      <Typography
-              variant="h2"
-              align="center"
-              style={
-                matchesXS
-                  ? {
-                      fontSize: "1.75rem",
-                      textAlign: "left",
-                      marginLeft: "1rem",
-                    }
-                  : {}
-              }
-            >
-          Projects
-        </Typography>
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-around"
-          alignItems="center"
-          className={classes.cardContainer}
-        >
-          <Card className={classes.cardItem}>
-            <CardContent>
-              <p>Hello</p>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                View
-              </Button>
-            </CardActions>
-          </Card>
-
-          <Card className={classes.cardItem}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Contemplative Reptile"
-                height="140"
-                image={reptile}
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-                <p>Hello</p>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                View
-              </Button>
-            </CardActions>
-          </Card>
-
-          <Card className={classes.cardItem}>
-            <CardContent>
-              <p>Hello</p>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                View
-              </Button>
-            </CardActions>
-          </Card>
-
-          <Card className={classes.cardItem}>
-            <CardContent>
-              <p>Hello</p>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                View
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      </Grid>
-  
+      
 
       <Grid item>
         {/*-----Call To Action Block-----*/}
