@@ -4,21 +4,24 @@ const arcBlue = "#2377bd";
 const arcOrange = "#FFBA60";
 const arcGrey = "#868686";
 const darkGrey = "#3f3f3f"
+const arcGreen = "#39B54A"
 
 export default createMuiTheme({
   palette: {
     common: {
       blue: arcBlue,
-      orange: arcOrange
+      orange: arcOrange,
+      green: arcGreen
     },
     primary: {
-      main: arcBlue
+      main: arcBlue,
+      light: "#C1E6FEAA"
     },
     secondary: {
-      main: arcOrange
-    }
-
-  },
+      main: arcGreen
+    },
+   
+},
   // typography for tabs,estimate and body etc
   typography: {
     tab: {

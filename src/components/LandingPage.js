@@ -93,6 +93,10 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "2em",
     },
   },
+  heroContainer:{
+    paddingBottom: "2.5em",
+    backgroundColor: theme.palette.common.blue
+  },
   heroTextContainer: {
     minWidth: "21.5em",
     marginLeft: "1em",
@@ -125,6 +129,10 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: "5em",
       paddingBottom: "2em",
     },
+  },
+  projects:{
+    backgroundColor: theme.palette.common.green,
+    padding: "2em"
   },
   revolutionBackground: {
     backgroundImage: `url(${revolutionBackground})`,
@@ -163,7 +171,7 @@ const useStyles = makeStyles((theme) => ({
     // width: "100%"
   },
   wave: {
-    backgroundColor: "#C1E6FEAA",
+    backgroundColor: theme.palette.primary.light,
     backgroundImage: `url(${wave})`,
     zIndex: "10",
     [theme.breakpoints.down("sm")]: {
@@ -176,14 +184,15 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   cardContainer: {
-    minHeight: "45em",
-    backgroundColor: "#39B54A",
+    // minHeight: "45em",
+    backgroundColor: theme.palette.common.tertiary,
     padding: "2em 0",
   },
   cardItem: {
     height: "18em",
     backgroundColor: "white",
     width: "15em",
+    margin: "1em"
   },
 }));
 
@@ -202,7 +211,7 @@ export default function LandingPage(props) {
 
   return (
     <Grid container direction="column" className={classes.main}>
-      <Grid item>
+      <Grid item  className={classes.heroContainer}>
         {" "}
         {/*-----Hero Block-----*/}
         <Grid
@@ -211,7 +220,7 @@ export default function LandingPage(props) {
           alignItems="center"
           direction="row"
           className={classes.wave}
-          style={{ position: "relative" }}
+          style={{ position: "relative"}}
         >
           {/* Lazy Layouts (Auto-layout) 
           here the breakpoints xs */}
@@ -389,110 +398,8 @@ export default function LandingPage(props) {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
-        {" "}
-        {/*-----Custom Software Block-----*/}
-        <Grid
-          container
-          direction="row"
-          justify={matchesSM ? "center" : undefined}
-          className={classes.serviceContainer}
-        >
-          <Grid
-            item
-            style={{
-              marginLeft: matchesSM ? 0 : "5em",
-              textAlign: matchesSM ? "center" : undefined,
-            }}
-          >
-            <Typography variant="h4">Custom Software Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Save Energy. Save Time. Save Money.
-            </Typography>
-            <Typography variant="subtitle1">
-              Complete digital solutions, from investigation to{" "}
-              <span className={classes.specialText}>celebration.</span>
-            </Typography>
-            <Button
-              component={Link}
-              to="/customsoftware"
-              variant="outlined"
-              className={classes.learnButton}
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(1);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </Button>
-          </Grid>
-          <Grid item>
-            <img
-              className={classes.icon}
-              alt="custom software icon"
-              src={customSoftwareIcon}
-            />
-          </Grid>
-        </Grid>
-      </Grid>
-
-      <Grid item >
-        {" "}
-        {/*-----Websites Block-----*/}
-        <Grid
-          container
-          direction="row"
-          justify={matchesSM ? "center" : "flex-end"}
-          className={classes.serviceContainer}
-        >
-          <Grid
-            item
-            style={{
-              textAlign: matchesSM ? "center" : undefined,
-              width: matchesSM ? undefined : "35em",
-            }}
-          >
-            <Typography variant="h4">Website Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Reach More. Discover More. Sell More.
-            </Typography>
-            <Typography variant="subtitle1">
-              Optimized for Search Engines, built for speed.
-            </Typography>
-            <Button
-              component={Link}
-              to="/websites"
-              variant="outlined"
-              className={classes.learnButton}
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(3);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </Button>
-          </Grid>
-          <Grid item style={{ marginRight: matchesSM ? 0 : "5em" }}>
-            <img
-              className={classes.icon}
-              alt="website icon"
-              src={websitesIcon}
-              width="250em"
-            />
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid item style={{backgroundColor: "#39B54A"}}>
+      
+      <Grid item className={classes.projects} >
       <Typography
               variant="h2"
               align="center"
@@ -569,6 +476,8 @@ export default function LandingPage(props) {
           </Card>
         </Grid>
       </Grid>
+  
+
       <Grid item>
         {/*-----Call To Action Block-----*/}
         <CallToAction setValue={props.setValue} />
