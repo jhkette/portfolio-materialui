@@ -79,10 +79,21 @@ export default createMuiTheme({
       fontWeight: 300,
       fontSize: "1.25rem"
     },
+    subtitle3: {
+      color: darkGrey,
+      fontWeight: 300,
+      fontSize: "1.25rem",
+      fontFamily: "Raleway",
+    },
     body1: {
       fontSize: "1.25rem",
       color: arcGrey,
       fontWeight: 300
+    },
+    body2: {
+      fontSize: "1rem",
+      color: arcGrey,
+      fontWeight: 400
     },
     caption: {
       fontSize: "1rem",

@@ -8,11 +8,18 @@ import footerAdornment from "../../assets/Footer Adornment.svg";
 import facebook from "../../assets/facebook.svg";
 import twitter from "../../assets/twitter.svg";
 import instagram from "../../assets/instagram.svg";
+import waveFooter from "../../assets/wave_footer.svg";
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    backgroundColor: theme.palette.common.blue,
+    backgroundImage: `url(${waveFooter})`,
+    backgroundColor: '#c4def8',
+    backgroundPosition: "bottom",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    height: "20rem",
     width: "100%",
+  
     zIndex: 1302,
     position: "relative"
   },
@@ -216,11 +223,7 @@ export default function Footer(props) {
         </Grid>
       </Hidden>
 
-      <img
-        alt="black decorative slash"
-        src={footerAdornment}
-        className={classes.adornment}
-      />
+      
 
       <Grid
         container

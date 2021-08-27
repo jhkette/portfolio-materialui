@@ -121,6 +121,7 @@ function App() {
           />
          
           <Route exact path="/estimate" component={() => <div>estimate</div>} />
+          <Route exact path="/example" component={() => <div>example</div>} />
         </Switch>
         <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
       </BrowserRouter>
