@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
 
@@ -21,7 +21,9 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
   
     zIndex: 1302,
-    position: "relative"
+    position: "relative",
+    bottom: "65px",
+
   },
   adornment: {
     width: "25em",
@@ -37,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     position: "absolute"
   },
   link: {
-    color: "white",
+    color: "#1a1a1a",
     fontFamily: "Arial",
     fontSize: "0.75rem",
     fontWeight: "bold",
@@ -47,25 +49,36 @@ const useStyles = makeStyles(theme => ({
     margin: "3em"
   },
   icon: {
-    height: "3em",
-    width: "3em",
+    height: "2.5em",
+    width: "2.5em",
     [theme.breakpoints.down("xs")]: {
-      height: "2.5em",
-      width: "2.5em"
+      height: "1.8em",
+      width: "1.8em"
     }
   },
   socialContainer: {
     position: "absolute",
-    marginTop: "-6em",
+    bottom: "-2.1em",
     right: "1.5em",
+    zIndex: "900",
     [theme.breakpoints.down("xs")]: {
       right: "0.6em"
     }
+  },
+  bottomContainer:{
+    height: "65px",
+    position: "absolute",
+    bottom: "-65px",
+    left: "0",
+    width: "100%",
+    backgroundColor: theme.palette.common.blue
+
   }
 }));
 
 export default function Footer(props) {
   const classes = useStyles();
+  const theme = useTheme();
 
   return (
     <footer className={classes.footer}>
@@ -259,6 +272,7 @@ export default function Footer(props) {
           <img alt="instagram logo" src={instagram} className={classes.icon} />
         </Grid>
       </Grid>
+      <div className={classes.bottomContainer} />
     </footer>
   );
 }

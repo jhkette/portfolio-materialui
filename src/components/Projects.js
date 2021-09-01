@@ -4,6 +4,14 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardMedia from "@material-ui/core/CardMedia";
+import { Link } from "react-router-dom";
+
+import Button from "@material-ui/core/Button";
 
 import vision from "../assets/vision.svg";
 import consultation from "../assets/consultationIcon.svg";
@@ -15,6 +23,19 @@ import launch from "../assets/launchIcon.svg";
 import maintain from "../assets/maintainIcon.svg";
 import iterate from "../assets/iterateIcon.svg";
 import technologyAnimation from "../animations/technologyAnimation/data.json";
+import customSoftwareIcon from "../assets/Custom Software Icon.svg";
+import mobileAppsIcon from "../assets/mobileIcon.svg";
+import websitesIcon from "../assets/websiteIcon.svg";
+import revolutionBackground from "../assets/repeatingBackground.svg";
+import infoBackground from "../assets/infoBackground.svg";
+import background from "../assets/computer.png";
+import backgroundSmall from "../assets/computer_small.png";
+import wave from "../assets/wave.svg";
+import waveS from "../assets/wave_small.svg";
+import reptile from "../assets/lights.jpg";
+import lights from "../assets/lights2.png";
+import table from "../assets/table.jpg";
+import gradient from "../assets/gradient.png";
 
 import CallToAction from "./ui/CallToAction";
 
@@ -26,7 +47,13 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: "1.5em",
       paddingRight: "1.5em"
     }
-  }
+  },
+    cardItem: {
+    height: "18em",
+    backgroundColor: "white",
+    width: "15em",
+    margin: "1em",
+  },
 }));
 
 export default function Revolution(props) {
@@ -56,7 +83,7 @@ export default function Revolution(props) {
           variant="h2"
           style={{ fontFamily: "Pacifico" }}
         >
-          The Revolution
+          Projects
         </Typography>
       </Grid>
       <Grid
@@ -68,15 +95,164 @@ export default function Revolution(props) {
         style={{ marginTop: "5em" }}
       >
         <Grid item lg>
-          <img
-            src={vision}
-            alt="mountain through binoculars"
-            style={{
-              maxWidth: matchesSM ? 300 : "40em",
-              marginRight: matchesMD ? 0 : "5em",
-              marginBottom: matchesMD ? "5em" : 0
-            }}
-          />
+        <Card className={classes.cardItem}>
+            <CardActionArea component={Link} to="/example">
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={reptile}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+              <Typography variant="body2">Hello</Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            <Button size="small" color="primary" component={Link} to="/example">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+
+          <Card className={classes.cardItem}>
+          <CardActionArea component={Link} to="/example">
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={table}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+              <Typography variant="body2">Hello</Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            <Button size="small" color="primary" component={Link} to="/example">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+
+          <Card className={classes.cardItem}>
+          <CardActionArea component={Link} to="/example">
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={lights}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+              <Typography variant="body2">Hello</Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            <Button size="small" color="primary" component={Link} to="/example">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+
+          <Card className={classes.cardItem}>
+          <CardActionArea component={Link} to="/example">
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={gradient}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+              <Typography variant="body2">Hello</Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            <Button size="small" color="primary" component={Link} to="/example">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+          <Card className={classes.cardItem}>
+          <CardActionArea component={Link} to="/example">
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={lights}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+              <Typography variant="body2">Hello</Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            <Button size="small" color="primary" component={Link} to="/example">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+
+          <Card className={classes.cardItem}>
+          <CardActionArea component={Link} to="/example">
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={gradient}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+              <Typography variant="body2">Hello</Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary" component={Link} to="/example">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+          <Card className={classes.cardItem}>
+            <CardActionArea component={Link} to="/example">
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={reptile}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+              <Typography variant="body2">Hello</Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            <Button size="small" color="primary" component={Link} to="/example">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+
+          <Card className={classes.cardItem}>
+          <CardActionArea component={Link} to="/example">
+              <CardMedia
+                component="img"
+                alt="Contemplative Reptile"
+                height="170"
+                image={table}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+              <Typography variant="body2">Hello</Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            <Button size="small" color="primary" component={Link} to="/example">
+                View
+              </Button>
+            </CardActions>
+          </Card>
+          
         </Grid>
         <Grid item container direction="column" lg style={{ maxWidth: "40em" }}>
           <Grid item>

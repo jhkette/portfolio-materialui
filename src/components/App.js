@@ -9,7 +9,7 @@ import Services from "./Services";
 import CustomSoftware from "./CustomSoftware";
 import MobileApps from "./MobileApps";
 import Websites from "./Websites";
-import Revolution from "./Revolution";
+import Projects from "./Projects";
 import About from "./About";
 import Contact from "./Contact"
 function App() {
@@ -88,9 +88,9 @@ function App() {
           />
           <Route
             exact
-            path="/revolution"
+            path="/projects"
             render={props => (
-              <Revolution
+              <Projects
                 {...props}
                 setValue={setValue}
                 setSelectedIndex={setSelectedIndex}

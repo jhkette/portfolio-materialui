@@ -184,7 +184,7 @@ export default function Header(props) {
       ariaPopup: anchorEl ? "true" : undefined,
       mouseOver: (event) => handleClick(event),
     },
-    { name: "The Revolution", link: "/revolution", activeIndex: 2 },
+    { name: "Projects", link: "/projects", activeIndex: 2 },
     { name: "About Us", link: "/about", activeIndex: 3 },
     { name: "Contact Us", link: "/contact", activeIndex: 4 },
   ];

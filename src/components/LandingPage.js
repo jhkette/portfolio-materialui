@@ -14,7 +14,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
 
-import CallToAction from "./ui/CallToAction";
+
 
 import animationData from "../animations/landinganimation/data";
 import customSoftwareIcon from "../assets/Custom Software Icon.svg";
@@ -130,6 +130,7 @@ const useStyles = makeStyles((theme) => ({
   },
   projects: {
     backgroundColor: theme.palette.common.blue,
+    paddingBottom: "2em"
   },
   revolutionBackground: {
     backgroundImage: `url(${revolutionBackground})`,
@@ -188,9 +189,14 @@ const useStyles = makeStyles((theme) => ({
   cardItem: {
     height: "18em",
     backgroundColor: "white",
-    width: "15em",
+    width: "12em",
     margin: "1em",
   },
+  footerTransition:{
+    height: "12em",
+    width: "100%",
+    background: "linear-gradient(180deg, #2176BD 0%, #C4DEF8 95%);",
+  }
 }));
 
 export default function LandingPage(props) {
@@ -231,6 +237,7 @@ export default function LandingPage(props) {
                       fontSize: "1.75rem",
                       textAlign: "left",
                       marginLeft: "1rem",
+                      
                     }
                   : {}
               }
@@ -278,7 +285,7 @@ export default function LandingPage(props) {
             ) : (
               <img
                 src={background}
-                style={{ height: "385px", marginTop: "3.5rem" }}
+                style={{ height: "325px", marginTop: "3.5rem" }}
               />
             )}
           </Grid>
@@ -292,10 +299,14 @@ export default function LandingPage(props) {
             matchesXS
               ? {
                   fontSize: "1.75rem",
-                  padding: "0 2rem",
-                  color: "white",
+                  margin: "0 2rem",
+                 
+                  fontFamily: "Pacifico",
+                  display: "inline-block",
+                  borderBottom: "3px solid #3F3F3F"
                 }
-              : { padding: "0 2rem", color: "white" }
+              : { margin: "0 2rem", fontFamily: "Pacifico", display: "inline-block",
+                  borderBottom: "3px solid #3F3F3F" }
           }
         >
           Projects
@@ -303,7 +314,7 @@ export default function LandingPage(props) {
         <Grid
           container
           direction="row"
-          justifyContent={matchesXS ?  "center" : "flex-start"}
+          justifyContent={matchesSM ?  "center" : "flex-start"}
           alignItems= {matchesXS ?  "center" : "flex-start" }
           className={classes.cardContainer}
         >
@@ -580,11 +591,7 @@ export default function LandingPage(props) {
           </Grid>
         </Grid>
       </Grid>
-
-      <Grid item>
-        {/*-----Call To Action Block-----*/}
-        <CallToAction setValue={props.setValue} />
-      </Grid>
+      <div className={classes.footerTransition} />
     </Grid>
   );
 }
