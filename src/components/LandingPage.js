@@ -14,8 +14,6 @@ import CardActions from "@material-ui/core/CardActions";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
 
-
-
 import animationData from "../animations/landinganimation/data";
 import customSoftwareIcon from "../assets/Custom Software Icon.svg";
 import mobileAppsIcon from "../assets/mobileIcon.svg";
@@ -32,7 +30,6 @@ import table from "../assets/table.jpg";
 import gradient from "../assets/gradient.png";
 
 const useStyles = makeStyles((theme) => ({
- 
   main: {
     position: "relative",
     top: "-65px",
@@ -58,11 +55,10 @@ const useStyles = makeStyles((theme) => ({
   },
   learnButtonHero: {
     ...theme.typography.learnButton,
-    fontSize: "1rem",
     height: 45,
     width: 150,
     "&:hover": {
-      backgroundColor: theme.palette.secondary.light,
+      backgroundColor: theme.palette.primary.light,
     },
 
     [theme.breakpoints.down("xs")]: {
@@ -70,14 +66,14 @@ const useStyles = makeStyles((theme) => ({
       position: "absolute",
       left: "1.15rem",
       zIndex: "250",
-      fontSize: "1rem",
+      fontSize: ".8rem",
     },
   },
   learnButton: {
     ...theme.typography.learnButton,
-    fontSize: "0.7rem",
+    fontSize: "0.95rem",
     height: "40px",
-    width: "120px",
+    width: "145px",
     marginTop: "1em",
     [theme.breakpoints.down("sm")]: {
       marginBottom: "2em",
@@ -130,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
   },
   projects: {
     backgroundColor: theme.palette.common.blue,
-    paddingBottom: "2em"
+    paddingBottom: "2em",
   },
   revolutionBackground: {
     backgroundImage: `url(${revolutionBackground})`,
@@ -192,11 +188,18 @@ const useStyles = makeStyles((theme) => ({
     width: "12em",
     margin: "1em",
   },
-  footerTransition:{
+  footerTransition: {
     height: "12em",
     width: "100%",
     background: "linear-gradient(180deg, #2176BD 0%, #C4DEF8 95%);",
-  }
+  },
+  subHeading: {
+    margin: "0 2rem",
+    paddingRight: "2rem",
+    fontFamily: "Pacifico",
+    display: "inline-block",
+    borderBottom: "3px solid #3F3F3F",
+  },
 }));
 
 export default function LandingPage(props) {
@@ -237,7 +240,6 @@ export default function LandingPage(props) {
                       fontSize: "1.75rem",
                       textAlign: "left",
                       marginLeft: "1rem",
-                      
                     }
                   : {}
               }
@@ -285,7 +287,7 @@ export default function LandingPage(props) {
             ) : (
               <img
                 src={background}
-                style={{ height: "325px", marginTop: "3.5rem" }}
+                style={{ height: "300px", marginTop: "3.9rem" }}
               />
             )}
           </Grid>
@@ -295,18 +297,13 @@ export default function LandingPage(props) {
         <Typography
           variant="h2"
           align="left"
+          className={classes.subHeading}
           style={
             matchesXS
               ? {
                   fontSize: "1.75rem",
-                  margin: "0 2rem",
-                 
-                  fontFamily: "Pacifico",
-                  display: "inline-block",
-                  borderBottom: "3px solid #3F3F3F"
                 }
-              : { margin: "0 2rem", fontFamily: "Pacifico", display: "inline-block",
-                  borderBottom: "3px solid #3F3F3F" }
+              : {}
           }
         >
           Projects
@@ -314,8 +311,8 @@ export default function LandingPage(props) {
         <Grid
           container
           direction="row"
-          justifyContent={matchesSM ?  "center" : "flex-start"}
-          alignItems= {matchesXS ?  "center" : "flex-start" }
+          justifyContent={matchesSM ? "center" : "flex-start"}
+          alignItems={matchesXS ? "center" : "flex-start"}
           className={classes.cardContainer}
         >
           <Card className={classes.cardItem}>
@@ -328,18 +325,23 @@ export default function LandingPage(props) {
                 title="Contemplative Reptile"
               />
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+                <Typography variant="body2">Hello</Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button size="small" color="primary" component={Link} to="/example">
+              <Button
+                size="small"
+                color="primary"
+                component={Link}
+                to="/example"
+              >
                 View
               </Button>
             </CardActions>
           </Card>
 
           <Card className={classes.cardItem}>
-          <CardActionArea component={Link} to="/example">
+            <CardActionArea component={Link} to="/example">
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
@@ -348,18 +350,23 @@ export default function LandingPage(props) {
                 title="Contemplative Reptile"
               />
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+                <Typography variant="body2">Hello</Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button size="small" color="primary" component={Link} to="/example">
+              <Button
+                size="small"
+                color="primary"
+                component={Link}
+                to="/example"
+              >
                 View
               </Button>
             </CardActions>
           </Card>
 
           <Card className={classes.cardItem}>
-          <CardActionArea component={Link} to="/example">
+            <CardActionArea component={Link} to="/example">
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
@@ -368,18 +375,23 @@ export default function LandingPage(props) {
                 title="Contemplative Reptile"
               />
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+                <Typography variant="body2">Hello</Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button size="small" color="primary" component={Link} to="/example">
+              <Button
+                size="small"
+                color="primary"
+                component={Link}
+                to="/example"
+              >
                 View
               </Button>
             </CardActions>
           </Card>
 
           <Card className={classes.cardItem}>
-          <CardActionArea component={Link} to="/example">
+            <CardActionArea component={Link} to="/example">
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
@@ -388,17 +400,22 @@ export default function LandingPage(props) {
                 title="Contemplative Reptile"
               />
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+                <Typography variant="body2">Hello</Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button size="small" color="primary" component={Link} to="/example">
+              <Button
+                size="small"
+                color="primary"
+                component={Link}
+                to="/example"
+              >
                 View
               </Button>
             </CardActions>
           </Card>
           <Card className={classes.cardItem}>
-          <CardActionArea component={Link} to="/example">
+            <CardActionArea component={Link} to="/example">
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
@@ -407,18 +424,23 @@ export default function LandingPage(props) {
                 title="Contemplative Reptile"
               />
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+                <Typography variant="body2">Hello</Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button size="small" color="primary" component={Link} to="/example">
+              <Button
+                size="small"
+                color="primary"
+                component={Link}
+                to="/example"
+              >
                 View
               </Button>
             </CardActions>
           </Card>
 
           <Card className={classes.cardItem}>
-          <CardActionArea component={Link} to="/example">
+            <CardActionArea component={Link} to="/example">
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
@@ -427,11 +449,16 @@ export default function LandingPage(props) {
                 title="Contemplative Reptile"
               />
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+                <Typography variant="body2">Hello</Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary" component={Link} to="/example">
+              <Button
+                size="small"
+                color="primary"
+                component={Link}
+                to="/example"
+              >
                 View
               </Button>
             </CardActions>
@@ -446,18 +473,23 @@ export default function LandingPage(props) {
                 title="Contemplative Reptile"
               />
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+                <Typography variant="body2">Hello</Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button size="small" color="primary" component={Link} to="/example">
+              <Button
+                size="small"
+                color="primary"
+                component={Link}
+                to="/example"
+              >
                 View
               </Button>
             </CardActions>
           </Card>
 
           <Card className={classes.cardItem}>
-          <CardActionArea component={Link} to="/example">
+            <CardActionArea component={Link} to="/example">
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
@@ -466,16 +498,20 @@ export default function LandingPage(props) {
                 title="Contemplative Reptile"
               />
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+                <Typography variant="body2">Hello</Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button size="small" color="primary" component={Link} to="/example">
+              <Button
+                size="small"
+                color="primary"
+                component={Link}
+                to="/example"
+              >
                 View
               </Button>
             </CardActions>
           </Card>
-
         </Grid>
       </Grid>
 

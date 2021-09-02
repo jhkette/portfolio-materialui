@@ -29,7 +29,7 @@ export default createMuiTheme({
       textTransform: "none",
       fontWeight: 700,
       color: "#1a1a1a",
-      fontSize: ".95rem"
+      fontSize: "1rem"
     },
     estimate: {
       fontFamily: "Pacifico",
@@ -109,7 +109,7 @@ export default createMuiTheme({
       fontFamily: "Roboto",
       fontWeight: "bold",
       backgroundColor: "white",
-      fontSize: "1.95rem"
+      fontSize: "1rem"
     }
   },
   // overides of materialui 
