@@ -18,6 +18,7 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     height: "20rem",
+   
     width: "100%",
   
     zIndex: 1302,
@@ -36,7 +37,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   mainContainer: {
-    position: "absolute"
+    position: "absolute",
+    marginTop: "10rem",
   },
   link: {
     color: "#1a1a1a",
@@ -66,7 +68,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   bottomContainer:{
-    height: "65px",
+    height: "66px",
     position: "absolute",
     bottom: "-65px",
     left: "0",

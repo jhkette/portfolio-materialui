@@ -1,10 +1,9 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Lottie from "react-lottie";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
-
 import ButtonArrow from "../components/ui/ButtonArrow";
 import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -174,7 +173,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    height: "30em",
+    height: "33em",
     width: "100%",
   },
   cardContainer: {
@@ -202,6 +201,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
+
 export default function LandingPage(props) {
   const classes = useStyles();
   const theme = useTheme();
@@ -214,6 +216,8 @@ export default function LandingPage(props) {
   //  the api is here https://material-ui.com/api/grid/
   // good blog https://www.dmcinfo.com/latest-thinking/blog/id/10114/a-simple-guide-to-material-ui-grids
   // <Grid container justify="flex-end" alignItems="center" direction="row"> -- this is the container
+
+
 
   return (
     <Grid container direction="column" className={classes.main}>
@@ -277,7 +281,7 @@ export default function LandingPage(props) {
                 src={backgroundSmall}
                 style={{
                   height: "280px",
-                  marginTop: "7.9rem",
+                  marginTop: "9rem",
                   position: "absolute",
                   top: "6rem",
                   left: "12rem",
@@ -287,7 +291,7 @@ export default function LandingPage(props) {
             ) : (
               <img
                 src={background}
-                style={{ height: "300px", marginTop: "3.9rem" }}
+                style={{ height: "390px", marginTop: "5.8rem" }}
               />
             )}
           </Grid>
