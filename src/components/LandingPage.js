@@ -281,7 +281,7 @@ export default function LandingPage(props) {
                 src={backgroundSmall}
                 style={{
                   height: "280px",
-                  marginTop: "9rem",
+                  marginTop: "12rem",
                   position: "absolute",
                   top: "6rem",
                   left: "12rem",
@@ -291,7 +291,7 @@ export default function LandingPage(props) {
             ) : (
               <img
                 src={background}
-                style={{ height: "390px", marginTop: "5.8rem" }}
+                style={{ height: "400px", marginTop: "5.8rem" }}
               />
             )}
           </Grid>

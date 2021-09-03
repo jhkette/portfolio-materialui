@@ -29,7 +29,7 @@ export default createMuiTheme({
       textTransform: "none",
       fontWeight: 700,
       color: "#1a1a1a",
-      fontSize: "1rem"
+      fontSize: "1.05rem"
     },
     estimate: {
       fontFamily: "Pacifico",
