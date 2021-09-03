@@ -110,7 +110,7 @@ export default function Revolution(props) {
           alignItems= "flex-start"
           className={classes.cardContainer}
         >
-          <Card className={classes.cardItem}>
+        <Card className={classes.cardItem}>
             <CardActionArea component={Link} to="/example">
               <CardMedia
                 component="img"
@@ -126,6 +126,7 @@ export default function Revolution(props) {
             <CardActions>
               <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -149,8 +150,9 @@ export default function Revolution(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -174,8 +176,9 @@ export default function Revolution(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -199,8 +202,9 @@ export default function Revolution(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -226,6 +230,7 @@ export default function Revolution(props) {
               <Button
                 size="small"
                 color="primary"
+                variant="outlined"
                 component={Link}
                 to="/example"
               >
@@ -248,8 +253,9 @@ export default function Revolution(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -272,8 +278,9 @@ export default function Revolution(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -297,8 +304,9 @@ export default function Revolution(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"

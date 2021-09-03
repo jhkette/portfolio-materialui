@@ -172,7 +172,7 @@ export default function Header(props) {
   //   }, [countCompletedTodos])
   // }
 
-  function GetRoute() {
+ 
     const getTheRoute = useCallback(() => {
       routes.forEach((route) => {
         switch (window.location.pathname) {
@@ -196,7 +196,7 @@ export default function Header(props) {
       // slide array and then a forEach loop
       getTheRoute()
     }, [getTheRoute]);
-  }
+  
   // https://wanago.io/2019/11/18/useeffect-hook-in-react-custom-hooks/
   // maybe fix using https://stackoverflow.com/questions/65321359/how-to-fix-warning-function-makes-the-dependencies-of-useeffect-hook-change
 
