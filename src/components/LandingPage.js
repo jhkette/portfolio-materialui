@@ -173,7 +173,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    height: "33em",
+    height: "38em",
     width: "100%",
   },
   cardContainer: {
