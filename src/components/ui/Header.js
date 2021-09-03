@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState} from "react";
+import { useEffect, useState, useCallback} from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -154,65 +154,52 @@ export default function Header(props) {
 
  
   
-  const menuOptions = [
-    { name: "Services", link: "/services", activeIndex: 1, selectedIndex: 0 },
-    {
-      name: "Custom Software Development",
-      link: "/customsoftware",
-      activeIndex: 1,
-      selectedIndex: 1,
-    },
-    {
-      name: "i0S/Android App Development",
-      link: "/mobileapps",
-      activeIndex: 1,
-      selectedIndex: 2,
-    },
-    {
-      name: "Website Development",
-      link: "/websites",
-      activeIndex: 1,
-      selectedIndex: 3,
-    },
-  ];
+
   const routes = [
     { name: "Home", link: "/", activeIndex: 0 },
-    {
-      name: "Services",
-      link: "/services",
-      activeIndex: 1,
-      ariaOwns: anchorEl ? "simple-menu" : undefined,
-      ariaPopup: anchorEl ? "true" : undefined,
-      mouseOver: (event) => handleClick(event),
-    },
-    { name: "Projects", link: "/projects", activeIndex: 2 },
-    { name: "About Us", link: "/about", activeIndex: 3 },
-    { name: "Contact Us", link: "/contact", activeIndex: 4 },
+    { name: "Projects", link: "/projects", activeIndex: 1 },
+    { name: "About Us", link: "/about", activeIndex: 2 },
+    { name: "Contact Us", link: "/contact", activeIndex: 3 },
   ];
-  // maybe fix using https://stackoverflow.com/questions/65321359/how-to-fix-warning-function-makes-the-dependencies-of-useeffect-hook-change
-  useEffect(() => {
-    // slide array and then a forEach loop
-    [...menuOptions, ...routes].forEach((route) => {
-      switch (window.location.pathname) {
-        case `${route.link}`:
-          if (props.value !== route.activeIndex) {
-            props.setValue(route.activeIndex);
-            if (
-              route.selectedIndex &&
-              route.selectedIndex !== props.selectedIndex
-            ) {
-              props.setSelectedIndex(route.selectedIndex);
+
+  // function useTodosCountDisplaying(todos) {
+  //   const countCompletedTodos = useCallback(() => {
+  //     return todos.filter(todo => todo.completed).length;
+  //   }, [todos]);
+   
+  //   useEffect(() => {
+  //     document.title = `Fetched ${countCompletedTodos()} completed todos`
+  //   }, [countCompletedTodos])
+  // }
+
+  function GetRoute() {
+    const getTheRoute = useCallback(() => {
+      routes.forEach((route) => {
+        switch (window.location.pathname) {
+          case `${route.link}`:
+            if (props.value !== route.activeIndex) {
+              props.setValue(route.activeIndex);
+              if (
+                route.selectedIndex &&
+                route.selectedIndex !== props.selectedIndex
+              ) {
+                props.setSelectedIndex(route.selectedIndex);
+              }
             }
-          }
-          break;
-        case "/estimate":
-          props.setValue(5);
-          break;
-        default:
-          break;
-      }
-    });
-  }, [props.value, props.selectedIndex, props, routes, menuOptions]);
+            break;
+          default:
+            break;
+        }
+      });
+    }, []);
+    useEffect(() => {
+      // slide array and then a forEach loop
+      getTheRoute()
+    }, [getTheRoute]);
+  }
+  // https://wanago.io/2019/11/18/useeffect-hook-in-react-custom-hooks/
+  // maybe fix using https://stackoverflow.com/questions/65321359/how-to-fix-warning-function-makes-the-dependencies-of-useeffect-hook-change
+
 
   // drawer jsx element. A swipeable drawer with button that appears
   // at certain screen widths
@@ -302,36 +289,7 @@ export default function Header(props) {
         ))}
       </Tabs>
    
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        open={openMenu}
-        onClose={handleClose}
-        classes={{ paper: classes.menu }}
-        MenuListProps={{
-          onMouseLeave: handleClose
-        }}
-        elevation={0}
-        style={{ zIndex: 1302 }}
-        keepMounted
-      >
-        {menuOptions.map((option, i) => (
-          <MenuItem
-            key={`${option}${i}`}
-            component={Link}
-            to={option.link}
-            classes={{ root: classes.menuItem }}
-            onClick={event => {
-              handleMenuItemClick(event, i);
-              props.setValue(1);
-              handleClose();
-            }}
-            selected={i === props.selectedIndex && props.value === 1}
-          >
-            {option.name}
-          </MenuItem>
-        ))}
-      </Menu>
+      
     </React.Fragment>
   );
   return (

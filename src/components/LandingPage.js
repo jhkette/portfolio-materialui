@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Lottie from "react-lottie";
+
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
@@ -13,10 +13,10 @@ import CardActions from "@material-ui/core/CardActions";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
 
-import animationData from "../animations/landinganimation/data";
+
 import customSoftwareIcon from "../assets/Custom Software Icon.svg";
 import mobileAppsIcon from "../assets/mobileIcon.svg";
-import websitesIcon from "../assets/websiteIcon.svg";
+
 import revolutionBackground from "../assets/repeatingBackground.svg";
 import infoBackground from "../assets/infoBackground.svg";
 import background from "../assets/computer.png";
@@ -197,7 +197,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "2rem",
     fontFamily: "Pacifico",
     display: "inline-block",
-    borderBottom: "3px solid #3F3F3F",
+    borderBottom: "6px solid #3F3F3F",
   },
 }));
 
@@ -335,6 +335,7 @@ export default function LandingPage(props) {
             <CardActions>
               <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -358,8 +359,9 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -383,8 +385,9 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -408,8 +411,9 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -435,6 +439,7 @@ export default function LandingPage(props) {
               <Button
                 size="small"
                 color="primary"
+                variant="outlined"
                 component={Link}
                 to="/example"
               >
@@ -457,8 +462,9 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -481,8 +487,9 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
@@ -506,8 +513,9 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button
+            <Button
                 size="small"
+                variant="outlined"
                 color="primary"
                 component={Link}
                 to="/example"
