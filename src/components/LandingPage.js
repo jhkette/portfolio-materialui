@@ -297,9 +297,9 @@ export default function LandingPage(props) {
                   : {}
               }
             >
-              Bringing West Coast Technology
+             <span style={ matchesXS ?{fontSize: "1.95"} : {fontSize: "3.55rem"}}>Hello!</span>
               <br />
-              to the Midwest
+              My Name is John Hasdas
             </Typography>
             <Grid
               container
