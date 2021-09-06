@@ -6,11 +6,8 @@ import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 import LandingPage from "./LandingPage";
 import Services from "./Services";
-import CustomSoftware from "./CustomSoftware";
-import MobileApps from "./MobileApps";
-import Websites from "./Websites";
 import Projects from "./Projects";
-import About from "./About";
+
 import Contact from "./Contact"
 function App() {
   // https://material-ui.com/components/lists/#lists
@@ -65,17 +62,7 @@ function App() {
               />
             )}
           />
-          <Route
-            exact
-            path="/about"
-            render={props => (
-              <About
-                {...props}
-                setValue={setValue}
-                setSelectedIndex={setSelectedIndex}
-              />
-            )}
-          />
+      
           <Route
             exact
             path="/contact"

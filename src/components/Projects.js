@@ -294,12 +294,10 @@ export default function Revolution(props) {
             </CardActions>
           </Card>
         </Grid>
-        <Typography variant="body1" paragraph style={{paddingTop: "1em"}}>
+        <Typography variant="body1" paragraph style={{paddingTop: "1em", paddingBottom: "4em"}}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, sem non auctor lacinia, massa sapien congue magna, sodales bibendum nisi purus non nisi. Sed hendrerit tortor quis velit bibendum fermentum non vestibulum tellus. Ut at metus odio. Donec eu ante molestie, vestibulum dolor id, porttitor felis. Nulla egestas velit nec nisl condimentum efficitur. Duis tempor tortor quis tortor varius, ut commodo nulla ultrices. Phasellus et sagittis est, vestibulum gravida magna. Donec eget consequat ex, sit amet fermentum tellus. Donec a maximus ipsum, id cursus ante. Maecenas eleifend ligula nec fermentum finibus. Nunc venenatis varius arcu, vel sodales nulla rhoncus vel. Aenean laoreet lacus vitae elit vehicula aliquet.
       </Typography>
-      <Typography variant="body1" paragraph style={{paddingTop: "1em"}}>
-Etiam consectetur neque id mi elementum eleifend. Donec ornare diam neque, sit amet sodales libero lacinia eget. Suspendisse finibus purus et elit tempor auctor. Pellentesque et pretium dolor. Aenean in porta tortor. In vestibulum mollis eleifend. Sed nec orci facilisis, ornare enim non, cursus justo. Integer est ligula, pharetra in lacus nec, rhoncus efficitur ligula. Pellentesque lobortis justo lacinia interdum convallis. 
-      </Typography>
+      
       </Grid>
       
 

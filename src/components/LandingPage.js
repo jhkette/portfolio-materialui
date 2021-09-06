@@ -195,14 +195,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "100%",
   },
-  mainContainer: {
-    // backgroundImage: `url(${background})`,
-    // backgroundPosition: "center",
-    // backgroundSize: "cover",
-    // backgroundRepeat: "no-repeat",
-    // minHeight: "35em",
-    // width: "100%"
-  },
+
   wave: {
     backgroundColor: theme.palette.primary.light,
     backgroundImage: `url(${wave})`,
@@ -340,7 +333,7 @@ export default function LandingPage(props) {
             ) : (
               <img
                 src={background}
-                style={{ height: "290px", marginTop: "6.2rem",  position: "relative", zIndex: 100 }}
+                style={{ height: "370px", marginTop: "5rem",  position: "relative", zIndex: 100 }}
               />
             )}
           </Grid>
