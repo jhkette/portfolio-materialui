@@ -78,6 +78,44 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: "2em",
     },
   },
+  stripe:{
+    height: "3.5rem",
+    width: "100%",
+    backgroundColor: theme.palette.common.blue,
+    position: "relative",
+    top: "-3.7rem",
+    zIndex: "100",
+    transform: "skewY(3.8deg)",
+  },
+  stripe2:{
+    height: "3.8rem",
+    width: "100%",
+    backgroundColor: theme.palette.common.blue,
+    position: "relative",
+    top: "-5.7rem",
+    zIndex: "100",
+    transform: "skewY(1.5deg)",
+
+  },
+  stripe3:{
+    height: "3.5rem",
+    width: "100%",
+    backgroundColor: theme.palette.common.dark,
+    position: "relative",
+    top: "-3.7rem",
+   
+    transform: "skewY(-3.8deg)",
+  },
+  stripe4:{
+    height: "3.8rem",
+    width: "100%",
+    backgroundColor: theme.palette.common.dark,
+    position: "relative",
+    top: "-5.7rem",
+  
+    transform: "skewY(-1.5deg)",
+
+  },
   mainContainer: {
     marginTop: "5em",
     [theme.breakpoints.down("md")]: {
@@ -124,8 +162,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   projects: {
-    backgroundColor: theme.palette.common.blue,
+    backgroundColor: theme.palette.common.dark,
     paddingBottom: "2em",
+   
   },
   revolutionBackground: {
     backgroundImage: `url(${revolutionBackground})`,
@@ -140,6 +179,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 15,
     padding: "1em",
     width: "14em",
+    zIndex: "200",
     [theme.breakpoints.down("sm")]: {},
   },
   mainTitle: {
@@ -173,13 +213,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    height: "34rem",
+    height: "36rem",
     width: "100%",
   },
   cardContainer: {
     // minHeight: "45em",
-    backgroundColor: theme.palette.common.tertiary,
+    backgroundColor: theme.palette.common.dark,
     padding: "0rem 1rem",
+    position: "relative",
+    top: "-2rem"
+    
   },
   cardItem: {
     height: "18em",
@@ -190,7 +233,10 @@ const useStyles = makeStyles((theme) => ({
   footerTransition: {
     height: "12em",
     width: "100%",
-    background: "linear-gradient(180deg, #2176BD 0%, #C4DEF8 95%);",
+    backgroundColor:   theme.palette.common.blue,
+    transform: "skewY(4deg)",
+    position: "relative",
+    top: "-3.5rem"
   },
   subHeading: {
     margin: "0 2rem",
@@ -281,7 +327,7 @@ export default function LandingPage(props) {
               <img
                 src={backgroundSmall}
                 style={{
-                  height: "280px",
+                  height: "240px",
                   marginTop: "12rem",
                   position: "absolute",
                   top: "6rem",
@@ -292,13 +338,15 @@ export default function LandingPage(props) {
             ) : (
               <img
                 src={background}
-                style={{ height: "320px", marginTop: "6.2rem" }}
+                style={{ height: "290px", marginTop: "6.2rem" }}
               />
             )}
           </Grid>
         </Grid>
       </Grid>
       <Grid item className={classes.projects}>
+        <div className={classes.stripe} />
+        <div className={classes.stripe2} />
         <Typography
           variant="h2"
           align="left"
@@ -307,8 +355,14 @@ export default function LandingPage(props) {
             matchesXS
               ? {
                   fontSize: "1.75rem",
+                  position: "relative",
+                  top: "-3.5rem",
+                  color: "white"
+
                 }
-              : {}
+              : {   position: "relative",
+                  top: "-3.5rem", 
+                  color: "white"}
           }
         >
           Projects
@@ -528,7 +582,9 @@ export default function LandingPage(props) {
         </Grid>
       </Grid>
 
-      <Grid item>
+      <Grid item style={{backgroundColor: theme.palette.common.blue }}>
+      <div className={classes.stripe3} />
+        <div className={classes.stripe4} />
         {" "}
         {/*-----Custom Software Block-----*/}
         <Grid
@@ -536,7 +592,7 @@ export default function LandingPage(props) {
           direction="row"
           justify={matchesSM ? "center" : undefined}
           className={classes.serviceContainer}
-          style={{ padding: "2em" }}
+          style={{ padding: "2em", }}
         >
           <Grid item>
             <Typography

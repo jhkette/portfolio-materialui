@@ -13,7 +13,7 @@ import waveFooter from "../../assets/wave_footer.svg";
 const useStyles = makeStyles(theme => ({
   footer: {
     backgroundImage: `url(${waveFooter})`,
-    backgroundColor: '#c4def8',
+    backgroundColor: '#fff',
     backgroundPosition: "bottom",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",

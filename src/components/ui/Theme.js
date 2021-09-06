@@ -4,21 +4,21 @@ const arcBlue = "#2377bd";
 const arcOrange = "#FFBA60";
 const arcGrey = "#868686";
 const darkGrey = "#3f3f3f"
-const arcGreen = "#39B54A"
+const darkBlue = "#003c6b"
 
 export default createMuiTheme({
   palette: {
     common: {
       blue: arcBlue,
       orange: arcOrange,
-      green: arcGreen
+      dark: darkBlue
     },
     primary: {
       main: arcBlue,
       light: "#C1E6FEAA"
     },
     secondary: {
-      main: arcGreen
+      main: darkBlue
     },
    
 },
