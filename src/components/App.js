@@ -53,39 +53,7 @@ function App() {
               />
             )}
           />
-          <Route
-            exact
-            path="/customsoftware"
-            render={props => (
-              <CustomSoftware
-                {...props}
-                setValue={setValue}
-                setSelectedIndex={setSelectedIndex}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/mobileapps"
-            render={props => (
-              <MobileApps
-                {...props}
-                setValue={setValue}
-                setSelectedIndex={setSelectedIndex}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/websites"
-            render={props => (
-              <Websites
-                {...props}
-                setValue={setValue}
-                setSelectedIndex={setSelectedIndex}
-              />
-            )}
-          />
+         
           <Route
             exact
             path="/projects"

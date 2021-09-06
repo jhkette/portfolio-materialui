@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
@@ -173,13 +173,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    height: "38em",
+    height: "34rem",
     width: "100%",
   },
   cardContainer: {
     // minHeight: "45em",
     backgroundColor: theme.palette.common.tertiary,
-    padding: "1.5rem 1rem",
+    padding: "0rem 1rem",
   },
   cardItem: {
     height: "18em",
@@ -197,7 +197,8 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "2rem",
     fontFamily: "Pacifico",
     display: "inline-block",
-    borderBottom: "6px solid #3F3F3F",
+    borderBottom: "3px solid #3F3F3F",
+    fontWeight: "100"
   },
 }));
 
@@ -291,7 +292,7 @@ export default function LandingPage(props) {
             ) : (
               <img
                 src={background}
-                style={{ height: "400px", marginTop: "5.8rem" }}
+                style={{ height: "320px", marginTop: "6.2rem" }}
               />
             )}
           </Grid>

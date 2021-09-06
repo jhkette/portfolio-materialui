@@ -13,31 +13,13 @@ import { Link } from "react-router-dom";
 
 import Button from "@material-ui/core/Button";
 
-import vision from "../assets/vision.svg";
-import consultation from "../assets/consultationIcon.svg";
-import mockup from "../assets/mockupIcon.svg";
-import review from "../assets/reviewIcon.svg";
-import design from "../assets/designIcon.svg";
-import build from "../assets/buildIcon.svg";
-import launch from "../assets/launchIcon.svg";
-import maintain from "../assets/maintainIcon.svg";
-import iterate from "../assets/iterateIcon.svg";
-import technologyAnimation from "../animations/technologyAnimation/data.json";
-import customSoftwareIcon from "../assets/Custom Software Icon.svg";
-import mobileAppsIcon from "../assets/mobileIcon.svg";
-import websitesIcon from "../assets/websiteIcon.svg";
-import revolutionBackground from "../assets/repeatingBackground.svg";
-import infoBackground from "../assets/infoBackground.svg";
-import background from "../assets/computer.png";
-import backgroundSmall from "../assets/computer_small.png";
-import wave from "../assets/wave.svg";
-import waveS from "../assets/wave_small.svg";
+
 import reptile from "../assets/lights.jpg";
 import lights from "../assets/lights2.png";
 import table from "../assets/table.jpg";
 import gradient from "../assets/gradient.png";
 
-import CallToAction from "./ui/CallToAction";
+
 
 const useStyles = makeStyles(theme => ({
   rowContainer: {
@@ -64,6 +46,7 @@ const useStyles = makeStyles(theme => ({
     display: "inline-block",
     marginBottom: "2rem",
     borderBottom: "3px solid #3F3F3F",
+    fontWeight: "100"
   },
 }));
 
@@ -74,14 +57,7 @@ export default function Revolution(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: false,
-    animationData: technologyAnimation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
+  
 
   return (
     <Grid container direction="column">
@@ -102,7 +78,9 @@ export default function Revolution(props) {
           Projects
         </Typography>
         <Typography
-          variant="body1" style={{ fontWeight: 700 }} paragraph>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, sem non auctor lacinia, massa sapien congue magna, sodales. </Typography>
+          variant="body1" style={{ fontWeight: 700 }} paragraph>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry’s standard dummy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Integer mattis, sem non auctor lacinia, massa sapien congue magna, sodales. </Typography>
         <Grid
           container
           direction="row"
