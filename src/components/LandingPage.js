@@ -229,6 +229,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     width: "12em",
     margin: "1em",
+    zIndex: "300",
+    position: "relative"
   },
   footerTransition: {
     height: "12em",
@@ -330,15 +332,15 @@ export default function LandingPage(props) {
                   height: "240px",
                   marginTop: "12rem",
                   position: "absolute",
-                  top: "6rem",
+                  top: "5rem",
                   left: "12rem",
-                  zIndex: -50,
+                  zIndex: 300,
                 }}
               />
             ) : (
               <img
                 src={background}
-                style={{ height: "290px", marginTop: "6.2rem" }}
+                style={{ height: "290px", marginTop: "6.2rem",  position: "relative", zIndex: 100 }}
               />
             )}
           </Grid>
