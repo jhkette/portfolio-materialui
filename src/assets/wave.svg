@@ -6,8 +6,8 @@
     <linearGradient id="gradient-0" bx:pinned="true"/>
     <linearGradient id="gradient-2" bx:pinned="true"/>
     <linearGradient gradientUnits="userSpaceOnUse" x1="333.597" y1="-4.476" x2="333.597" y2="420.07" id="gradient-3" gradientTransform="matrix(0.999904, 0.013818, -0.007183, 0.519731, 0.030198, -6.7585)">
-      <stop offset="0" style="stop-color: rgb(122, 185, 230);"/>
-      <stop offset="1" style="stop-color: rgb(35, 119, 189);"/>
+      <stop offset="0" style="stop-color: #2f3954;"/>
+      <stop offset="1" style="stop-color: #14171F;"/>
     </linearGradient>
   </defs>
   <path style="stroke-width: 0px; stroke: url(#gradient-1-0); fill-rule: nonzero; paint-order: stroke; fill: url(#gradient-3);" d="M 103.712 -2.347 C 121.846 -3.598 301.62 -20.921 281.837 69.937 C 265.509 144.296 351.442 36.284 391.728 155.247 C 419.693 237.828 676.163 105.355 666.33 240.025 L 667.586 305.131 L -2.527 300.919 L -7.839 -4.253 L 86.7 -4.475" transform="matrix(0.999999, 0.00137, -0.00137, 0.999999, 0.254483, -0.457812)"/>

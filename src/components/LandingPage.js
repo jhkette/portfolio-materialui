@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
@@ -12,21 +12,30 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
-
+import { useSpring, animated } from "@react-spring/web";
 
 import customSoftwareIcon from "../assets/Custom Software Icon.svg";
 import mobileAppsIcon from "../assets/mobileIcon.svg";
 
 import revolutionBackground from "../assets/repeatingBackground.svg";
 import infoBackground from "../assets/infoBackground.svg";
-import background from "../assets/computer.png";
-import backgroundSmall from "../assets/computer_small.png";
+
 import wave from "../assets/wave.svg";
 import waveS from "../assets/wave_small.svg";
 import reptile from "../assets/lights.jpg";
 import lights from "../assets/lights2.png";
 import table from "../assets/table.jpg";
 import gradient from "../assets/gradient.png";
+import coding from "../assets/drawing.svg";
+import codingDark from "../assets/drawingcopy.svg";
+import polygon from "../assets/polygon.svg";
+import polygonDark from "../assets/polygon_dark.svg";
+import circle from "../assets/circle.svg";
+import triangle from "../assets/triangle.svg";
+import triangle2 from "../assets/triangle2.svg";
+import triangle3 from "../assets/triangle3.svg";
+import arrow from "../assets/arrow.svg";
+import up from "../assets/up.svg";
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -78,43 +87,15 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: "2em",
     },
   },
-  stripe:{
-    height: "3.5rem",
-    width: "100%",
-    backgroundColor: theme.palette.common.blue,
-    position: "relative",
-    top: "-3.7rem",
-    zIndex: "100",
-    transform: "skewY(3.8deg)",
-  },
-  stripe2:{
-    height: "3.8rem",
-    width: "100%",
-    backgroundColor: theme.palette.common.blue,
-    position: "relative",
-    top: "-5.7rem",
-    zIndex: "100",
-    transform: "skewY(1.5deg)",
 
-  },
-  stripe3:{
-    height: "3.5rem",
-    width: "100%",
-    backgroundColor: theme.palette.common.dark,
-    position: "relative",
-    top: "-3.7rem",
-   
-    transform: "skewY(-3.8deg)",
-  },
-  stripe4:{
+  stripe4: {
     height: "3.8rem",
     width: "100%",
     backgroundColor: theme.palette.common.dark,
     position: "relative",
     top: "-5.7rem",
-  
+
     transform: "skewY(-1.5deg)",
-
   },
   mainContainer: {
     marginTop: "5em",
@@ -128,9 +109,36 @@ const useStyles = makeStyles((theme) => ({
   heroContainer: {
     backgroundColor: theme.palette.common.blue,
   },
+  shapeContainer: {
+    position: "absolute",
+    width: "100%",
+    height: "45rem",
+
+    zIndex: "-100",
+  },
+  stripe: {
+    width: "100%",
+    background:
+      "linear-gradient(to top right, #003C6B calc(50% - 1px),  #14171F calc(50% + 1px) )",
+    height: "100px",
+  },
+  stripe2: {
+    width: "100%",
+    background:
+      "linear-gradient(to top left, #2377BD calc(50% - 1px),  #003C6B calc(50% + 1px) )",
+    height: "100px",
+  },
+
+  stripe3: {
+    width: "100%",
+    background:
+      "linear-gradient(to top right, #fff calc(50% - 1px),  #2377BD calc(50% + 1px) )",
+    height: "100px",
+  },
   heroTextContainer: {
     minWidth: "21.5em",
     marginLeft: "1em",
+    position: "relative",
     [theme.breakpoints.down("md")]: {
       marginTop: "3em",
     },
@@ -164,7 +172,6 @@ const useStyles = makeStyles((theme) => ({
   projects: {
     backgroundColor: theme.palette.common.dark,
     paddingBottom: "2em",
-   
   },
   revolutionBackground: {
     backgroundImage: `url(${revolutionBackground})`,
@@ -197,7 +204,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   wave: {
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: "#2e3a59",
     backgroundImage: `url(${wave})`,
     zIndex: "10",
     [theme.breakpoints.down("sm")]: {
@@ -206,16 +213,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    height: "36rem",
+    height: "42rem",
     width: "100%",
+    position: "relative",
   },
+
   cardContainer: {
     // minHeight: "45em",
     backgroundColor: theme.palette.common.dark,
     padding: "0rem 1rem",
     position: "relative",
-    top: "-2rem"
-    
   },
   cardItem: {
     height: "18em",
@@ -223,15 +230,15 @@ const useStyles = makeStyles((theme) => ({
     width: "12em",
     margin: "1em",
     zIndex: "300",
-    position: "relative"
+    position: "relative",
   },
   footerTransition: {
     height: "12em",
     width: "100%",
-    backgroundColor:   theme.palette.common.blue,
+    backgroundColor: theme.palette.common.blue,
     transform: "skewY(4deg)",
     position: "relative",
-    top: "-3.5rem"
+    top: "-3.5rem",
   },
   subHeading: {
     margin: "0 2rem",
@@ -239,12 +246,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Pacifico",
     display: "inline-block",
     borderBottom: "3px solid #3F3F3F",
-    fontWeight: "100"
+    fontWeight: "100",
   },
 }));
-
-
-
 
 export default function LandingPage(props) {
   const classes = useStyles();
@@ -253,13 +257,46 @@ export default function LandingPage(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
+  const n = useRef(0);
+  const styles = useSpring({
+    config: { duration: 10000 },
+    loop: { reverse: true },
+    from: { y: -50 },
+    to: { y: 150 },
+  });
+
+  const styles1 = useSpring({
+    config: { duration: 12000 },
+    loop: { reverse: true },
+    from: { y: 50 },
+    to: { y: 80 },
+  });
+
+  const styles2 = useSpring({
+    config: { duration: 5000 },
+    loop: { reverse: true },
+    from: { y: 5 },
+    to: { y: 55 },
+  });
+
+  const styles3 = useSpring({
+    config: { duration: 5000 },
+    loop: { reverse: true },
+    from: { y: 55 },
+    to: { y: 20 },
+  });
+
+  const styles4 = useSpring({
+    config: { duration: 5000 },
+    loop: { reverse: true },
+    from: { y: 60 },
+    to: { y: 10 },
+  });
   // for grid info see https://material-ui.com/components/grid/
   // a grid system that uses flexbox
   //  the api is here https://material-ui.com/api/grid/
   // good blog https://www.dmcinfo.com/latest-thinking/blog/id/10114/a-simple-guide-to-material-ui-grids
   // <Grid container justify="flex-end" alignItems="center" direction="row"> -- this is the container
-
-
 
   return (
     <Grid container direction="column" className={classes.main}>
@@ -274,6 +311,178 @@ export default function LandingPage(props) {
           className={classes.wave}
           style={{ position: "relative" }}
         >
+          <div className={classes.shapeContainer}>
+            <animated.div
+              style={{
+                width: 190,
+                height: 190,
+                display: "flex",
+                justifyContent: "center",
+                position: "absolute",
+                color: "blue",
+                left: "75%",
+                top: "12rem",
+                zIndex: "900",
+                ...styles4,
+              }}
+            >
+              <img src={coding} style={{ height: "125px" }} />
+            </animated.div>
+            <animated.div
+              style={{
+                width: 190,
+                height: 190,
+                display: "flex",
+                justifyContent: "center",
+                position: "absolute",
+                color: "blue",
+                left: "70%",
+                top: "35rem",
+                zIndex: "900",
+                ...styles2,
+              }}
+            >
+              <img src={coding} style={{ height: "105px" }} />
+            </animated.div>
+            <animated.div
+              style={{
+                width: 140,
+                height: 140,
+                display: "flex",
+                justifyContent: "center",
+
+                position: "absolute",
+                left: "85%",
+                top: "3rem",
+                zIndex: "900",
+                ...styles1,
+              }}
+            >
+              <img src={arrow} style={{ height: "100px" }} />
+            </animated.div>
+            <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+
+                position: "absolute",
+                left: "85%",
+                top: "18rem",
+                zIndex: "900",
+                ...styles2,
+              }}
+            >
+              <img src={polygon} style={{ height: "290px" }} />
+            </animated.div>
+            <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "absolute",
+                left: "35%",
+                top: "22rem",
+                zIndex: "900",
+                paddingTop: "75px",
+                ...styles4,
+              }}
+            >
+              <img src={circle} style={{ height: "190px" }} />
+            </animated.div>
+            <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "absolute",
+                left: "59%",
+                top: "22rem",
+                ...styles3,
+              }}
+            >
+              <img src={triangle} style={{ height: "120px" }} />
+            </animated.div>
+            <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "absolute",
+                left: "40%",
+                top: "5rem",
+                ...styles,
+              }}
+            >
+              <img src={arrow} style={{ height: "120px" }} />
+            </animated.div>
+            <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "absolute",
+                left: "5%",
+                top: "2rem",
+                ...styles,
+              }}
+            >
+              <img src={polygon} style={{ height: "150px" }} />
+            </animated.div>
+            <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "absolute",
+                left: "-5%",
+                top: ".5rem",
+                ...styles,
+              }}
+            >
+              <img src={circle} />
+            </animated.div>
+            <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "absolute",
+                left: "25%",
+                top: "2rem",
+                ...styles,
+              }}
+            >
+              <img src={triangle2} style={{ height: "100px" }} />
+            </animated.div>
+            <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "absolute",
+                left: "90%",
+                top: "32rem",
+                ...styles2,
+              }}
+            >
+              <img src={triangle2} style={{ height: "90px" }} />
+            </animated.div>
+            <img src={polygonDark} />
+            <img src={triangle3} style={{ height: "30px", position: "absolute", left: "70%", top: "190px" }} />
+            <img src={polygonDark} style={{ height: "30px" }} />
+            <img src={codingDark} style={{ height: "20px", position: "absolute", left: "25%", top: "190px" }} />
+            <img src={polygonDark} style={{ height: "40px", position: "absolute", left: "80%", top: "290px" }} />
+            <img src={triangle3} style={{ height: "30px", position: "absolute", left: "35%", top: "90px"  }} />
+            <img src={polygonDark} style={{ height: "30px" }} />
+            <img src={codingDark} style={{ height: "20px", position: "absolute", left: "350px", top: "290px" }} />
+            <img src={triangle3} style={{ height: "30px", position: "absolute", left: "150px", top: "490px" }} />
+            <img src={polygonDark} style={{ height: "30px" }} />
+            <img src={codingDark} style={{ height: "50px" }} />
+            <img src={triangle3} style={{ height: "30px", position: "absolute", left: "80%", top: "790px" }} />
+            <img src={polygonDark} style={{ height: "30px" }} />
+            <img src={codingDark} style={{ height: "50px" }} />
+          </div>
+
           {/* Lazy Layouts (Auto-layout) 
           here the breakpoints xs */}
           <Grid xs item className={classes.heroTextContainer}>
@@ -290,9 +499,15 @@ export default function LandingPage(props) {
                   : {}
               }
             >
-             <span style={ matchesXS ?{fontSize: "1.95"} : {fontSize: "3.55rem"}}>Hello!</span>
+              <span
+                style={
+                  matchesXS ? { fontSize: "2.25" } : { fontSize: "4.9rem" }
+                }
+              >
+                Hello!
+              </span>
               <br />
-              My Name is John Hasdas
+              My Name is John Doe
             </Typography>
             <Grid
               container
@@ -317,31 +532,17 @@ export default function LandingPage(props) {
               </Grid>
             </Grid>
           </Grid>
-          <Grid xs={12} md={5} lg={5} item className={classes.mainContainer}>
-            {matchesSM ? (
-              <img
-                src={backgroundSmall}
-                style={{
-                  height: "240px",
-                  marginTop: "12rem",
-                  position: "absolute",
-                  top: "5rem",
-                  left: "12rem",
-                  zIndex: 300,
-                }}
-              />
-            ) : (
-              <img
-                src={background}
-                style={{ height: "370px", marginTop: "5rem",  position: "relative", zIndex: 100 }}
-              />
-            )}
-          </Grid>
+          <Grid
+            xs={12}
+            md={5}
+            lg={5}
+            item
+            className={classes.mainContainer}
+          ></Grid>
         </Grid>
       </Grid>
+      <div className={classes.stripe} />
       <Grid item className={classes.projects}>
-        <div className={classes.stripe} />
-        <div className={classes.stripe2} />
         <Typography
           variant="h2"
           align="left"
@@ -350,14 +551,12 @@ export default function LandingPage(props) {
             matchesXS
               ? {
                   fontSize: "1.75rem",
-                  position: "relative",
-                  top: "-3.5rem",
-                  color: "white"
 
+                  color: "white",
                 }
-              : {   position: "relative",
-                  top: "-3.5rem", 
-                  color: "white"}
+              : {
+                  color: "white",
+                }
           }
         >
           Projects
@@ -409,7 +608,7 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button
+              <Button
                 size="small"
                 variant="outlined"
                 color="primary"
@@ -435,7 +634,7 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button
+              <Button
                 size="small"
                 variant="outlined"
                 color="primary"
@@ -461,7 +660,7 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button
+              <Button
                 size="small"
                 variant="outlined"
                 color="primary"
@@ -512,7 +711,7 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button
+              <Button
                 size="small"
                 variant="outlined"
                 color="primary"
@@ -537,7 +736,7 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button
+              <Button
                 size="small"
                 variant="outlined"
                 color="primary"
@@ -563,7 +762,7 @@ export default function LandingPage(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button
+              <Button
                 size="small"
                 variant="outlined"
                 color="primary"
@@ -576,10 +775,8 @@ export default function LandingPage(props) {
           </Card>
         </Grid>
       </Grid>
-
-      <Grid item style={{backgroundColor: theme.palette.common.blue }}>
-      <div className={classes.stripe3} />
-        <div className={classes.stripe4} />
+      <div className={classes.stripe2} />
+      <Grid item style={{ backgroundColor: theme.palette.common.blue }}>
         {" "}
         {/*-----Custom Software Block-----*/}
         <Grid
@@ -587,7 +784,7 @@ export default function LandingPage(props) {
           direction="row"
           justify={matchesSM ? "center" : undefined}
           className={classes.serviceContainer}
-          style={{ padding: "2em", }}
+          style={{ padding: "2em" }}
         >
           <Grid item>
             <Typography
@@ -691,7 +888,7 @@ export default function LandingPage(props) {
           </Grid>
         </Grid>
       </Grid>
-      <div className={classes.footerTransition} />
+      <div className={classes.stripe3} />
     </Grid>
   );
 }

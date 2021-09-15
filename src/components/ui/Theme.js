@@ -28,7 +28,7 @@ export default createMuiTheme({
       fontFamily: "Raleway",
       textTransform: "none",
       fontWeight: 700,
-      color: "#1a1a1a",
+      color: "#fff",
       fontSize: "1.05rem"
     },
     estimate: {
@@ -40,8 +40,8 @@ export default createMuiTheme({
     h1:{
       fontFamily: "Raleway",
       fontWeight: 700,
-      fontSize: "2.75rem",
-      color: darkGrey,
+      fontSize: "3.3rem",
+      color: "#fff",
       lineHeight: 1.5,
 
     },
