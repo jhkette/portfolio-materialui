@@ -259,36 +259,50 @@ export default function LandingPage(props) {
 
   const n = useRef(0);
   const styles = useSpring({
-    config: { duration: 7000 },
+    loop: true,
     loop: { reverse: true },
+    config: { duration: 7000 },
+  
     from: { y: -50 },
     to: { y: 150 },
+    
   });
 
   const styles1 = useSpring({
-    config: { duration: 6000 },
+    loop: true,
     loop: { reverse: true },
+    config: { duration: 6000 },
+ 
     from: { y: 50 },
     to: { y: 80 },
+    
   });
 
   const styles2 = useSpring({
-    config: { duration: 5000 },
+    loop: true,
     loop: { reverse: true },
+    config: { duration: 5000 },
+   
     from: { y: 5 },
     to: { y: 55 },
+  
   });
 
   const styles3 = useSpring({
-    config: { duration: 5000 },
+    loop: true,
     loop: { reverse: true },
+    config: { duration: 5000 },
+  
     from: { y: 55 },
     to: { y: 20 },
+   
   });
 
   const styles4 = useSpring({
-    config: { duration: 5000 },
+    loop: true,
     loop: { reverse: true },
+    config: { duration: 5000 },
+  
     from: { y: 60 },
     to: { y: 10 },
   });
