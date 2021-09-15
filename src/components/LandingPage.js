@@ -259,14 +259,14 @@ export default function LandingPage(props) {
 
   const n = useRef(0);
   const styles = useSpring({
-    config: { duration: 10000 },
+    config: { duration: 7000 },
     loop: { reverse: true },
     from: { y: -50 },
     to: { y: 150 },
   });
 
   const styles1 = useSpring({
-    config: { duration: 12000 },
+    config: { duration: 6000 },
     loop: { reverse: true },
     from: { y: 50 },
     to: { y: 80 },
@@ -326,7 +326,7 @@ export default function LandingPage(props) {
                 ...styles4,
               }}
             >
-              <img src={coding} style={{ height: "125px" }} />
+              <img src={coding} style={{ height: "95px" }} />
             </animated.div>
             <animated.div
               style={{
