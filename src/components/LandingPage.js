@@ -257,54 +257,42 @@ export default function LandingPage(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
-  const n = useRef(0);
   const styles = useSpring({
-    loop: true,
+    
     loop: { reverse: true },
     config: { duration: 7000 },
-  
+
     from: { y: -50 },
     to: { y: 150 },
-    
   });
 
   const styles1 = useSpring({
-    loop: true,
-    loop: { reverse: true },
-    config: { duration: 6000 },
- 
+   
+    config: { duration: 5000 },
     from: { y: 50 },
     to: { y: 80 },
-    
+    loop: { reverse: true },
   });
 
   const styles2 = useSpring({
-    loop: true,
-    loop: { reverse: true },
     config: { duration: 5000 },
-   
     from: { y: 5 },
     to: { y: 55 },
-  
+    loop: { reverse: true },
   });
 
-  const styles3 = useSpring({
-    loop: true,
-    loop: { reverse: true },
+  const styles3 = useSpring({ 
     config: { duration: 5000 },
-  
     from: { y: 55 },
     to: { y: 20 },
-   
+    loop: { reverse: true },
   });
 
   const styles4 = useSpring({
-    loop: true,
-    loop: { reverse: true },
     config: { duration: 5000 },
-  
     from: { y: 60 },
     to: { y: 10 },
+    loop: { reverse: true },
   });
   // for grid info see https://material-ui.com/components/grid/
   // a grid system that uses flexbox
@@ -482,17 +470,73 @@ export default function LandingPage(props) {
               <img src={triangle2} style={{ height: "90px" }} />
             </animated.div>
             <img src={polygonDark} />
-            <img src={triangle3} style={{ height: "30px", position: "absolute", left: "70%", top: "190px" }} />
+            <img
+              src={triangle3}
+              style={{
+                height: "30px",
+                position: "absolute",
+                left: "70%",
+                top: "190px",
+              }}
+            />
             <img src={polygonDark} style={{ height: "30px" }} />
-            <img src={codingDark} style={{ height: "20px", position: "absolute", left: "25%", top: "190px" }} />
-            <img src={polygonDark} style={{ height: "40px", position: "absolute", left: "80%", top: "290px" }} />
-            <img src={triangle3} style={{ height: "30px", position: "absolute", left: "35%", top: "90px"  }} />
+            <img
+              src={codingDark}
+              style={{
+                height: "20px",
+                position: "absolute",
+                left: "25%",
+                top: "190px",
+              }}
+            />
+            <img
+              src={polygonDark}
+              style={{
+                height: "40px",
+                position: "absolute",
+                left: "80%",
+                top: "290px",
+              }}
+            />
+            <img
+              src={triangle3}
+              style={{
+                height: "30px",
+                position: "absolute",
+                left: "35%",
+                top: "90px",
+              }}
+            />
             <img src={polygonDark} style={{ height: "30px" }} />
-            <img src={codingDark} style={{ height: "20px", position: "absolute", left: "350px", top: "290px" }} />
-            <img src={triangle3} style={{ height: "30px", position: "absolute", left: "150px", top: "490px" }} />
+            <img
+              src={codingDark}
+              style={{
+                height: "20px",
+                position: "absolute",
+                left: "350px",
+                top: "290px",
+              }}
+            />
+            <img
+              src={triangle3}
+              style={{
+                height: "30px",
+                position: "absolute",
+                left: "150px",
+                top: "490px",
+              }}
+            />
             <img src={polygonDark} style={{ height: "30px" }} />
             <img src={codingDark} style={{ height: "50px" }} />
-            <img src={triangle3} style={{ height: "30px", position: "absolute", left: "80%", top: "790px" }} />
+            <img
+              src={triangle3}
+              style={{
+                height: "30px",
+                position: "absolute",
+                left: "80%",
+                top: "790px",
+              }}
+            />
             <img src={polygonDark} style={{ height: "30px" }} />
             <img src={codingDark} style={{ height: "50px" }} />
           </div>
