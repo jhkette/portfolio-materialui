@@ -259,40 +259,43 @@ export default function LandingPage(props) {
 
   const styles = useSpring({
     
-    loop: { reverse: true },
+  
     config: { duration: 7000 },
 
-    from: { y: -50 },
-    to: { y: 150 },
+    from: { transform: "translate(0,40%)" },
+    to: [{ transform: "translate(0,70%)" }, { transform: "translate(0,40%)" }],
+    loop: true,
   });
 
   const styles1 = useSpring({
    
-    config: { duration: 5000 },
-    from: { y: 50 },
-    to: { y: 80 },
-    loop: { reverse: true },
+    config: { duration: 7000 },
+    from: { transform: "translate(0,20%)" },
+    to: [{ transform: "translate(0,-40%)" }, { transform: "translate(0,20%)" }],
+    loop: true,
   });
 
   const styles2 = useSpring({
-    config: { duration: 5000 },
-    from: { y: 5 },
-    to: { y: 55 },
-    loop: { reverse: true },
+    from: { transform: "translate(0,20%)" },
+    to: [{ transform: "translate(0,-20%)" }, { transform: "translate(0,20%)" }],
+    config: { duration: 8500 },
+   
+    loop: true
   });
 
   const styles3 = useSpring({ 
-    config: { duration: 5000 },
-    from: { y: 55 },
-    to: { y: 20 },
-    loop: { reverse: true },
+    config: { duration: 7000 },
+    from: { transform: "translate(0,30%)" },
+    to: [{ transform: "translate(0,-30%)" }, { transform: "translate(0,30%)" }],
+    loop: true
   });
 
   const styles4 = useSpring({
-    config: { duration: 5000 },
-    from: { y: 60 },
-    to: { y: 10 },
-    loop: { reverse: true },
+    config: { duration: 6000 },
+    from: { transform: "translate(0,35%)" },
+    to: [{ transform: "translate(0,-40%)" }, { transform: "translate(0,35%)" }],
+   
+    loop: true,
   });
   // for grid info see https://material-ui.com/components/grid/
   // a grid system that uses flexbox
