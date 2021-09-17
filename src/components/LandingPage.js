@@ -27,15 +27,19 @@ import lights from "../assets/lights2.png";
 import table from "../assets/table.jpg";
 import gradient from "../assets/gradient.png";
 import coding from "../assets/drawing.svg";
+import coding2 from "../assets/drawing_small.svg";
 import codingDark from "../assets/drawingcopy.svg";
 import polygon from "../assets/polygon.svg";
 import polygonDark from "../assets/polygon_dark.svg";
 import circle from "../assets/circle.svg";
+import rectangle from "../assets/rectangle.svg";
 import triangle from "../assets/triangle.svg";
 import triangle2 from "../assets/triangle2.svg";
 import triangle3 from "../assets/triangle3.svg";
 import arrow from "../assets/arrow.svg";
+import arrowgrey from "../assets/arrow_grey.svg";
 import up from "../assets/up.svg";
+import square from "../assets/square.svg";
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -213,7 +217,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    height: "42rem",
+    height: "50rem",
     width: "100%",
     position: "relative",
   },
@@ -262,38 +266,38 @@ export default function LandingPage(props) {
   
     config: { duration: 7000 },
 
-    from: { transform: "translate(0,40%)" },
-    to: [{ transform: "translate(0,70%)" }, { transform: "translate(0,40%)" }],
+    from: { transform: "translate(0,55%)" },
+    to: [{ transform: "translate(0,70%)" }, { transform: "translate(0,55%)" }],
     loop: true,
   });
 
   const styles1 = useSpring({
    
-    config: { duration: 7000 },
-    from: { transform: "translate(0,20%)" },
-    to: [{ transform: "translate(0,-40%)" }, { transform: "translate(0,20%)" }],
+    config: { duration: 9000 },
+    from: { transform: "translate(0,10%)" },
+    to: [{ transform: "translate(0,0%)" }, { transform: "translate(0,10%)" }],
     loop: true,
   });
 
   const styles2 = useSpring({
     from: { transform: "translate(0,20%)" },
     to: [{ transform: "translate(0,-20%)" }, { transform: "translate(0,20%)" }],
-    config: { duration: 8500 },
+    config: { duration: 9500 },
    
     loop: true
   });
 
   const styles3 = useSpring({ 
-    config: { duration: 7000 },
+    config: { duration: 9000 },
     from: { transform: "translate(0,30%)" },
     to: [{ transform: "translate(0,-30%)" }, { transform: "translate(0,30%)" }],
     loop: true
   });
 
   const styles4 = useSpring({
-    config: { duration: 6000 },
+    config: { duration: 9000 },
     from: { transform: "translate(0,35%)" },
-    to: [{ transform: "translate(0,-40%)" }, { transform: "translate(0,35%)" }],
+    to: [{ transform: "translate(0,-20%)" }, { transform: "translate(0,35%)" }],
    
     loop: true,
   });
@@ -325,13 +329,13 @@ export default function LandingPage(props) {
                 justifyContent: "center",
                 position: "absolute",
                 color: "blue",
-                left: "75%",
+                left: "70%",
                 top: "12rem",
                 zIndex: "900",
                 ...styles4,
               }}
             >
-              <img src={coding} style={{ height: "95px" }} />
+              <img src={coding} style={{ height: "125px" }} />
             </animated.div>
             <animated.div
               style={{
@@ -347,7 +351,7 @@ export default function LandingPage(props) {
                 ...styles2,
               }}
             >
-              <img src={coding} style={{ height: "105px" }} />
+              <img src={coding2} style={{ height: "35px" }} />
             </animated.div>
             <animated.div
               style={{
@@ -400,12 +404,12 @@ export default function LandingPage(props) {
                 justifyContent: "center",
                 alignItems: "center",
                 position: "absolute",
-                left: "59%",
-                top: "22rem",
+                left: "41%",
+                top: "20rem",
                 ...styles3,
               }}
             >
-              <img src={triangle} style={{ height: "120px" }} />
+              <img src={triangle} style={{ height: "240px" }} />
             </animated.div>
             <animated.div
               style={{
@@ -418,7 +422,7 @@ export default function LandingPage(props) {
                 ...styles,
               }}
             >
-              <img src={arrow} style={{ height: "120px" }} />
+              <img src={arrowgrey} style={{ height: "50px" }} />
             </animated.div>
             <animated.div
               style={{
@@ -440,11 +444,11 @@ export default function LandingPage(props) {
                 alignItems: "center",
                 position: "absolute",
                 left: "-5%",
-                top: ".5rem",
-                ...styles,
+                top: "7rem",
+                ...styles1,
               }}
             >
-              <img src={circle} />
+              <img src={circle} style={{ height: "950px" }}  />
             </animated.div>
             <animated.div
               style={{
@@ -465,12 +469,12 @@ export default function LandingPage(props) {
                 justifyContent: "center",
                 alignItems: "center",
                 position: "absolute",
-                left: "90%",
-                top: "32rem",
+                left: "20%",
+                top: "37rem",
                 ...styles2,
               }}
             >
-              <img src={triangle2} style={{ height: "90px" }} />
+              <img src={triangle} style={{ height: "90px" }} />
             </animated.div>
             <img src={polygonDark} />
             <img
@@ -478,7 +482,7 @@ export default function LandingPage(props) {
               style={{
                 height: "30px",
                 position: "absolute",
-                left: "70%",
+                left: "50%",
                 top: "190px",
               }}
             />
@@ -510,7 +514,7 @@ export default function LandingPage(props) {
                 top: "90px",
               }}
             />
-            <img src={polygonDark} style={{ height: "30px" }} />
+            <img src={polygonDark} style={{ height: "100px" }} />
             <img
               src={codingDark}
               style={{
@@ -529,8 +533,8 @@ export default function LandingPage(props) {
                 top: "490px",
               }}
             />
-            <img src={polygonDark} style={{ height: "30px" }} />
-            <img src={codingDark} style={{ height: "50px" }} />
+            <img src={polygonDark} style={{ height: "90px" }} />
+            <img src={codingDark} style={{ height: "80px" }} />
             <img
               src={triangle3}
               style={{
@@ -540,8 +544,9 @@ export default function LandingPage(props) {
                 top: "790px",
               }}
             />
-            <img src={polygonDark} style={{ height: "30px" }} />
+            <img src={polygonDark} style={{ height: "100px" }} />
             <img src={codingDark} style={{ height: "50px" }} />
+            <img src={rectangle} style={{height: "760px", position: "absolute", top: "45%", left: "79%"}} />
           </div>
 
           {/* Lazy Layouts (Auto-layout) 
