@@ -32,6 +32,8 @@ import codingDark from "../assets/drawingcopy.svg";
 import polygon from "../assets/polygon.svg";
 import polygonDark from "../assets/polygon_dark.svg";
 import circle from "../assets/circle.svg";
+import circlesmall from "../assets/circle_small.svg";
+import circleplain from "../assets/circle_plain.svg";
 import rectangle from "../assets/rectangle.svg";
 import triangle from "../assets/triangle.svg";
 import triangle2 from "../assets/triangle2.svg";
@@ -362,12 +364,12 @@ export default function LandingPage(props) {
 
                 position: "absolute",
                 left: "85%",
-                top: "3rem",
+                top: "2rem",
                 zIndex: "900",
                 ...styles1,
               }}
             >
-              <img src={arrow} style={{ height: "100px" }} />
+              <img src={arrow} style={{ height: "120px" }} />
             </animated.div>
             <animated.div
               style={{
@@ -406,7 +408,7 @@ export default function LandingPage(props) {
                 position: "absolute",
                 left: "41%",
                 top: "20rem",
-                ...styles3,
+                ...styles,
               }}
             >
               <img src={triangle} style={{ height: "240px" }} />
@@ -443,12 +445,12 @@ export default function LandingPage(props) {
                 justifyContent: "center",
                 alignItems: "center",
                 position: "absolute",
-                left: "-5%",
+                left: "-9%",
                 top: "7rem",
                 ...styles1,
               }}
             >
-              <img src={circle} style={{ height: "950px" }}  />
+              <img src={circle} style={{ height: "1050px" }}  />
             </animated.div>
             <animated.div
               style={{
@@ -480,22 +482,14 @@ export default function LandingPage(props) {
             <img
               src={triangle3}
               style={{
-                height: "30px",
+                height: "50px",
                 position: "absolute",
-                left: "50%",
-                top: "190px",
+                left: "60%",
+                top: "220px",
               }}
             />
-            <img src={polygonDark} style={{ height: "30px" }} />
-            <img
-              src={codingDark}
-              style={{
-                height: "20px",
-                position: "absolute",
-                left: "25%",
-                top: "190px",
-              }}
-            />
+            
+          
             <img
               src={polygonDark}
               style={{
@@ -514,7 +508,7 @@ export default function LandingPage(props) {
                 top: "90px",
               }}
             />
-            <img src={polygonDark} style={{ height: "100px" }} />
+           
             <img
               src={codingDark}
               style={{
@@ -533,8 +527,8 @@ export default function LandingPage(props) {
                 top: "490px",
               }}
             />
-            <img src={polygonDark} style={{ height: "90px" }} />
-            <img src={codingDark} style={{ height: "80px" }} />
+            <img src={polygonDark} style={{ height: "290px", position: "absolute", left: "50%"}} />
+            <img src={codingDark} style={{ height: "60px", position: "absolute", left: "170px", top: "200px" }} />
             <img
               src={triangle3}
               style={{
@@ -544,8 +538,10 @@ export default function LandingPage(props) {
                 top: "790px",
               }}
             />
-            <img src={polygonDark} style={{ height: "100px" }} />
-            <img src={codingDark} style={{ height: "50px" }} />
+          
+            <img src={circleplain} style={{ height: "280px" }}  />
+            <img src={circleplain} style={{ height: "220px" }}  />
+          
             <img src={rectangle} style={{height: "760px", position: "absolute", top: "45%", left: "79%"}} />
           </div>
 
@@ -561,6 +557,7 @@ export default function LandingPage(props) {
                       fontSize: "1.75rem",
                       textAlign: "left",
                       marginLeft: "1rem",
+                      width: "100%"
                     }
                   : {}
               }
@@ -570,10 +567,10 @@ export default function LandingPage(props) {
                   matchesXS ? { fontSize: "2.25" } : { fontSize: "4.9rem" }
                 }
               >
-                Hello!
+                Hello!  My Name is John Doe
               </span>
               <br />
-              My Name is John Doe
+             
             </Typography>
             <Grid
               container
