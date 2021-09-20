@@ -36,9 +36,9 @@
      showborder="true" />
   <defs
      id="defs2" />
- <g fill="none" stroke="#D84315">
+ <g fill="none" stroke="#D84315" stroke-width="2px">
     <polygon
-        strokeWidth="1px"
+        strokeWidth="3px"
         strokeLinejoin="round"
         strokeMiterlimit="10"
         points="14.921,2.27 28.667,25.5 1.175,25.5 "
