@@ -142,15 +142,25 @@ const useStyles = makeStyles((theme) => ({
     height: "100px",
   },
   heroTextContainer: {
-    minWidth: "21.5em",
-    marginLeft: "1em",
-    position: "relative",
+    width: "100%",
+    marginBottom: "4rem",
+    position: "absolute",
+    fontSize: "3.5rem",
+   
+  },
+  heroText: {
     [theme.breakpoints.down("md")]: {
       marginTop: "3em",
+      fontSize: "2.9rem",
     },
     [theme.breakpoints.down("xs")]: {
       marginLeft: 0,
+      fontSize: "2.5rem",
+       textAlign: "left",
+      marginLeft: "1rem",
+                     
     },
+
   },
   specialText: {
     fontFamily: "Pacifico",
@@ -485,7 +495,7 @@ export default function LandingPage(props) {
                 height: "50px",
                 position: "absolute",
                 left: "60%",
-                top: "220px",
+                top: "120px",
               }}
             />
             
@@ -551,25 +561,12 @@ export default function LandingPage(props) {
             <Typography
               variant="h1"
               align="center"
-              style={
-                matchesXS
-                  ? {
-                      fontSize: "1.75rem",
-                      textAlign: "left",
-                      marginLeft: "1rem",
-                      width: "100%"
-                    }
-                  : {}
-              }
+              className={classes.heroText}
             >
-              <span
-                style={
-                  matchesXS ? { fontSize: "2.25" } : { fontSize: "4.9rem" }
-                }
-              >
+             
                 Hello!  My Name is John Doe
-              </span>
-              <br />
+            
+            
              
             </Typography>
             <Grid
