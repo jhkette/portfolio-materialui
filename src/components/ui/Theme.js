@@ -40,7 +40,7 @@ export default createMuiTheme({
     h1:{
       fontFamily: "Raleway",
       fontWeight: 700,
-      fontSize: "3.3rem",
+      fontSize: "3.95rem",
       color: "#fff",
       lineHeight: 1.5,
 

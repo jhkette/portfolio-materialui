@@ -158,8 +158,7 @@ export default function Header(props) {
   const routes = [
     { name: "Home", link: "/", activeIndex: 0 },
     { name: "Projects", link: "/projects", activeIndex: 1 },
-    { name: "About Us", link: "/about", activeIndex: 2 },
-    { name: "Contact Us", link: "/contact", activeIndex: 3 },
+    { name: "Contact", link: "/contact", activeIndex: 2 },
   ];
 
   // function useTodosCountDisplaying(todos) {

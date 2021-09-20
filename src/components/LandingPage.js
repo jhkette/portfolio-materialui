@@ -38,6 +38,7 @@ import rectangle from "../assets/rectangle.svg";
 import triangle from "../assets/triangle.svg";
 import triangle2 from "../assets/triangle2.svg";
 import triangle3 from "../assets/triangle3.svg";
+import triangle4 from "../assets/triangle4.svg";
 import arrow from "../assets/arrow.svg";
 import arrowgrey from "../assets/arrow_grey.svg";
 import up from "../assets/up.svg";
@@ -60,7 +61,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   buttonContainer: {
-    marginTop: "1em",
     [theme.breakpoints.down("xs")]: {
       // justifyContent: "",
       marginLeft: "-3rem",
@@ -149,8 +149,9 @@ const useStyles = makeStyles((theme) => ({
    
   },
   heroText: {
+    marginTop: "2rem",
     [theme.breakpoints.down("md")]: {
-      marginTop: "3em",
+
       fontSize: "2.9rem",
     },
     [theme.breakpoints.down("xs")]: {
@@ -159,6 +160,18 @@ const useStyles = makeStyles((theme) => ({
        textAlign: "left",
       marginLeft: "1rem",
                      
+    },
+
+  },
+  spanText: {
+    display: "block",
+    fontSize: "1.95rem",
+    fontWeight: "100",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.5rem"
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: "1rem"
     },
 
   },
@@ -455,12 +468,12 @@ export default function LandingPage(props) {
                 justifyContent: "center",
                 alignItems: "center",
                 position: "absolute",
-                left: "-9%",
+                left: "-16%",
                 top: "7rem",
                 ...styles1,
               }}
             >
-              <img src={circle} style={{ height: "1050px" }}  />
+              <img src={circle} style={{ height: "1350px" }}  />
             </animated.div>
             <animated.div
               style={{
@@ -486,7 +499,7 @@ export default function LandingPage(props) {
                 ...styles2,
               }}
             >
-              <img src={triangle} style={{ height: "90px" }} />
+              <img src={triangle4} style={{ height: "90px" }} />
             </animated.div>
             <img src={polygonDark} />
             <img
@@ -551,6 +564,7 @@ export default function LandingPage(props) {
           
             <img src={circleplain} style={{ height: "280px" }}  />
             <img src={circleplain} style={{ height: "220px" }}  />
+            <img src={circleplain} style={{ height: "320px" }}  />
           
             <img src={rectangle} style={{height: "760px", position: "absolute", top: "45%", left: "79%"}} />
           </div>
@@ -566,8 +580,8 @@ export default function LandingPage(props) {
              
                 Hello!  My Name is John Doe
             
-            
              
+             <span className={classes.spanText}>I am a junior web developer</span>
             </Typography>
             <Grid
               container
