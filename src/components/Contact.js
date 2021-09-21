@@ -21,6 +21,10 @@ import emailIcon from "../assets/email.svg";
 import airplane from "../assets/send.svg";
 
 const useStyles = makeStyles(theme => ({
+  container: { 
+    backgroundColor: "#2E3A59",
+    paddingBottom: "65px"
+  },
   background: {
     backgroundImage: `url(${background})`,
     backgroundPosition: "center",
@@ -31,6 +35,15 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("md")]: {
       backgroundImage: `url(${mobileBackground})`
     }
+  },
+  subHeading: {
+    color: "#fff",
+    paddingRight: "2rem",
+    fontFamily: "Pacifico",
+    display: "inline-block",
+    marginBottom: "2rem",
+    borderBottom: "3px solid #fff",
+    fontWeight: "100"
   },
   estimateButton: {
     ...theme.typography.estimate,
@@ -181,11 +194,12 @@ export default function Contact(props) {
         item
         container
         direction="column"
+        className={classes.container}
         justify="center"
         alignItems="center"
         style={{
           marginBottom: matchesMD ? "5em" : 0,
-          marginTop: matchesSM ? "1em" : matchesMD ? "5em" : 0
+          paddingTop: matchesSM ? "1em" : matchesMD ? "5em" : 0
         }}
         lg={4}
         xl={3}
@@ -196,17 +210,11 @@ export default function Contact(props) {
             <Grid item>
               <Typography
                 align={matchesMD ? "center" : undefined}
-                variant="h2"
+                variant="h4"
                 style={{ lineHeight: 1 }}
+                className={classes.subHeading}
               >
                 Contact Us
-              </Typography>
-              <Typography
-                align={matchesMD ? "center" : undefined}
-                variant="body1"
-                style={{ color: theme.palette.common.blue }}
-              >
-                We're waiting.
               </Typography>
             </Grid>
             <Grid item container style={{ marginTop: "2em" }}>
@@ -448,68 +456,7 @@ export default function Contact(props) {
         autoHideDuration={4000}
         onClose={() => setAlert(false)}
       />
-      <Grid
-        item
-        container
-        direction={matchesMD ? "column" : "row"}
-        className={classes.background}
-        alignItems="center"
-        justify={matchesMD ? "center" : undefined}
-        lg={8}
-        xl={9}
-      >
-        <Grid
-          item
-          style={{
-            marginLeft: matchesMD ? 0 : "3em",
-            textAlign: matchesMD ? "center" : "inherit"
-          }}
-        >
-          <Grid container direction="column">
-            <Grid item>
-              <Typography align={matchesMD ? "center" : undefined} variant="h2">
-                Simple Software.
-                <br />
-                Revolutionary Results.
-              </Typography>
-              <Typography
-                align={matchesMD ? "center" : undefined}
-                variant="subtitle2"
-                style={{ fontSize: "1.5rem" }}
-              >
-                Take advantage of the 21st Century.
-              </Typography>
-              <Grid container justify={matchesMD ? "center" : undefined} item>
-                <Button
-                  component={Link}
-                  to="/revolution"
-                  variant="outlined"
-                  className={classes.learnButton}
-                  onClick={() => props.setValue(2)}
-                >
-                  <span style={{ marginRight: 5 }}>Learn More</span>
-                  <ButtonArrow
-                    width={10}
-                    height={10}
-                    fill={theme.palette.common.blue}
-                  />
-                </Button>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item>
-          <Button
-            component={Link}
-            to="/estimate"
-            variant="contained"
-            className={classes.estimateButton}
-            onClick={() => props.setValue(5)}
-          >
-            Free Estimate
-          </Button>
-        </Grid>
-      </Grid>
+    
     </Grid>
   );
 }

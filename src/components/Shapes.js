@@ -30,6 +30,12 @@ const useStyles = makeStyles((theme) => ({
 
       zIndex: "-100",
     },
+    shape: {
+      display: "block",
+      [theme.breakpoints.down("sm")]: {
+        display: "none"
+      }
+    }
   }));
 
 export default function Shapes(props) {
@@ -93,8 +99,9 @@ export default function Shapes(props) {
           zIndex: "900",
           ...styles4,
         }}
+       
       >
-        <img src={coding} style={{ height: "125px" }} />
+        <img src={coding} style={{ height: "125px" }}  className={classes.shape} />
       </animated.div>
       <animated.div
         style={{
@@ -112,30 +119,15 @@ export default function Shapes(props) {
       >
         <img src={coding2} style={{ height: "35px" }} />
       </animated.div>
-      <animated.div
-        style={{
-          width: 140,
-          height: 140,
-          display: "flex",
-          justifyContent: "center",
-
-          position: "absolute",
-          left: "85%",
-          top: "2rem",
-          zIndex: "900",
-          ...styles1,
-        }}
-      >
-        <img src={arrow} style={{ height: "120px" }} />
-      </animated.div>
+      
       <animated.div
         style={{
           display: "flex",
           justifyContent: "center",
 
           position: "absolute",
-          left: "85%",
-          top: "18rem",
+          left: "55%",
+          top: "22rem",
           zIndex: "900",
           ...styles2,
         }}
@@ -157,19 +149,7 @@ export default function Shapes(props) {
       >
         <img src={circle} style={{ height: "190px" }} />
       </animated.div>
-      <animated.div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          position: "absolute",
-          left: "41%",
-          top: "20rem",
-          ...styles,
-        }}
-      >
-        <img src={triangle} style={{ height: "200px" }} />
-      </animated.div>
+     
       <animated.div
         style={{
           display: "flex",
@@ -189,12 +169,12 @@ export default function Shapes(props) {
           justifyContent: "center",
           alignItems: "center",
           position: "absolute",
-          left: "5%",
+          left: "50%",
           top: "2rem",
           ...styles,
         }}
       >
-        <img src={polygon} style={{ height: "150px" }} />
+        <img src={polygon} style={{ height: "150px"}} />
       </animated.div>
       <animated.div
         style={{
@@ -206,8 +186,9 @@ export default function Shapes(props) {
           top: "6.5rem",
           ...styles1,
         }}
+        
       >
-        <img src={circle} style={{ height: "1550px" }} />
+        <img src={circle} style={{ height: "1550px" }}   className={classes.shape} />
       </animated.div>
       <animated.div
         style={{
@@ -218,9 +199,10 @@ export default function Shapes(props) {
           left: "25%",
           top: "2rem",
           ...styles,
-        }}
+        }} 
+       
       >
-        <img src={triangle2} style={{ height: "100px" }} />
+        <img src={triangle2} style={{ height: "100px" }}  className={classes.shape} />
       </animated.div>
       <animated.div
         style={{
@@ -233,7 +215,7 @@ export default function Shapes(props) {
           ...styles2,
         }}
       >
-        <img src={triangle4} style={{ height: "90px" }} />
+        <img src={triangle4} style={{ height: "90px" }}  className={classes.shape}/>
       </animated.div>
       <img src={polygonDark} />
       <img
@@ -265,37 +247,13 @@ export default function Shapes(props) {
         }}
       />
 
-      <img
-        src={codingDark}
-        style={{
-          height: "20px",
-          position: "absolute",
-          left: "350px",
-          top: "290px",
-        }}
-      />
-      <img
-        src={triangle3}
-        style={{
-          height: "30px",
-          position: "absolute",
-          left: "150px",
-          top: "490px",
-        }}
-      />
+      
+     
       <img
         src={polygonDark}
-        style={{ height: "290px", position: "absolute", left: "50%" }}
+        style={{ height: "290px", position: "absolute", left: "50%" }} 
       />
-      <img
-        src={codingDark}
-        style={{
-          height: "60px",
-          position: "absolute",
-          left: "170px",
-          top: "200px",
-        }}
-      />
+     
       <img
         src={triangle3}
         style={{
@@ -303,12 +261,12 @@ export default function Shapes(props) {
           position: "absolute",
           left: "80%",
           top: "790px",
-        }}
+        }} 
+        className={classes.shape}
       />
 
-      <img src={circleplain} style={{ height: "280px" }} />
-      <img src={circleplain} style={{ height: "220px" }} />
-      <img src={circleplain} style={{ height: "320px" }} />
+      <img src={circleplain} style={{ height: "280px" }} className={classes.shape} />
+     
 
       <img
         src={rectangle}

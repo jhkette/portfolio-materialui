@@ -146,8 +146,8 @@ const useStyles = makeStyles((theme) => ({
   },
   spanText: {
     display: "block",
-    fontSize: "1.95rem",
-    fontWeight: "100",
+    fontSize: "2.55rem",
+    fontWeight: "500",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
     },
@@ -234,9 +234,9 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
   },
   cardItem: {
-    height: "18em",
+    height: "20rem",
     backgroundColor: "white",
-    width: "12em",
+    width: "14rem",
     margin: "1em",
     zIndex: "300",
     position: "relative",
@@ -296,28 +296,7 @@ export default function LandingPage(props) {
                 I am a junior web developer
               </span>
             </Typography>
-            <Grid
-              container
-              justify="flex-start"
-              className={classes.buttonContainer}
-            >
-              <Grid item>
-                <Button
-                  component={Link}
-                  to="/revolution"
-                  className={classes.learnButtonHero}
-                  variant="outlined"
-                  onClick={() => props.setValue(2)}
-                >
-                  <span style={{ marginRight: 10 }}>Learn More</span>
-                  <ButtonArrow
-                    width={15}
-                    height={15}
-                    fill={theme.palette.common.blue}
-                  />
-                </Button>
-              </Grid>
-            </Grid>
+            
           </Grid>
           <Grid
             xs={12}
@@ -360,7 +339,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="170"
+                height="190"
                 image={reptile}
                 title="Contemplative Reptile"
               />
@@ -386,7 +365,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="170"
+                height="190"
                 image={table}
                 title="Contemplative Reptile"
               />
@@ -412,7 +391,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="170"
+                height="190"
                 image={lights}
                 title="Contemplative Reptile"
               />
@@ -438,7 +417,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="170"
+                height="190"
                 image={gradient}
                 title="Contemplative Reptile"
               />
@@ -463,7 +442,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="170"
+                height="190"
                 image={lights}
                 title="Contemplative Reptile"
               />
@@ -489,7 +468,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="170"
+                height="190"
                 image={gradient}
                 title="Contemplative Reptile"
               />
@@ -514,7 +493,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="170"
+                height="190"
                 image={reptile}
                 title="Contemplative Reptile"
               />
@@ -540,7 +519,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="170"
+                height="190"
                 image={table}
                 title="Contemplative Reptile"
               />

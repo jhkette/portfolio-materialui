@@ -49,7 +49,8 @@ const useStyles = makeStyles(theme => ({
   },
 
   tabContainer: {
-    marginLeft: "auto"
+    marginLeft: "auto",
+    backgroundColor: "#2E3A59",
   },
   tab: {
     ...theme.typography.tab,
@@ -106,10 +107,11 @@ const useStyles = makeStyles(theme => ({
     }
   },
   appbar: {
+   
     zIndex: theme.zIndex.modal + 1,
     display: "inline-block",
     color: "#1a1a1a",
-   
+    
     padding: "5px 0",
     width: "auto",
     marginRight: "auto",
@@ -118,6 +120,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("md")]: {
       padding: "0"
     },
+  },
+  container: {
+    backgroundColor: "#2E3A59",
   }
 }));
 
@@ -292,7 +297,7 @@ export default function Header(props) {
     </React.Fragment>
   );
   return (
-    <React.Fragment>
+    <div className={classes.container}>
       <ElevationScroll {...props}>
         <AppBar position="absolute"  className={classes.appbar}>
           <Toolbar disableGutters>
@@ -303,6 +308,6 @@ export default function Header(props) {
         </AppBar>
       </ElevationScroll>
       <div className={classes.toolbarMargin} />
-    </React.Fragment>
+    </div>
   );
 }

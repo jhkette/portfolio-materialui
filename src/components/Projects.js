@@ -36,18 +36,22 @@ const useStyles = makeStyles(theme => ({
     margin: "1em",
   },
   projects: {
-    backgroundColor: "white",
+    backgroundColor: "#2E3A59",
     padding: "2rem",
+
   },
   subHeading: {
-    
+    color: "#fff",
     paddingRight: "2rem",
     fontFamily: "Pacifico",
     display: "inline-block",
     marginBottom: "2rem",
-    borderBottom: "3px solid #3F3F3F",
+    borderBottom: "3px solid #fff",
     fontWeight: "100"
   },
+  container: {
+    backgroundColor: "#2E3A59"
+  }
 }));
 
 export default function Revolution(props) {
@@ -60,7 +64,7 @@ export default function Revolution(props) {
   
 
   return (
-    <Grid container direction="column">
+    <Grid container direction="column" className={classes.container}>
       
     <Grid item className={classes.projects}>
         <Typography

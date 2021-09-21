@@ -48,7 +48,7 @@ export default createMuiTheme({
     h2: {
       fontFamily: "Raleway",
       fontWeight: 700,
-      fontSize: "2.35rem",
+      fontSize: "2.65rem",
       color: darkGrey,
       lineHeight: 1.5,
       
@@ -87,12 +87,12 @@ export default createMuiTheme({
     },
     body1: {
       fontSize: "1.25rem",
-      color: arcGrey,
+      color: "#fff",
       fontWeight: 300
     },
     body2: {
       fontSize: "1rem",
-      color: arcGrey,
+      color:"#fff",
       fontWeight: 400
     },
     caption: {
@@ -120,6 +120,9 @@ export default createMuiTheme({
         color: arcBlue,
         fontSize: "1rem"
       }
+    },
+    MuiCardActionArea: {
+      height: "190px"
     },
     MuiInput: {
       root: {
