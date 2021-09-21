@@ -40,14 +40,14 @@ export default createMuiTheme({
     h1:{
       fontFamily: "Raleway",
       fontWeight: 700,
-      fontSize: "4.2rem",
+      fontSize: "3.65rem",
       color: "#fff",
       lineHeight: 1.5,
 
     },
     h2: {
       fontFamily: "Raleway",
-      fontWeight: 700,
+      fontWeight: 900,
       fontSize: "2.65rem",
       color: darkGrey,
       lineHeight: 1.5,
@@ -93,6 +93,11 @@ export default createMuiTheme({
     body2: {
       fontSize: "1rem",
       color:"#fff",
+      fontWeight: 400
+    },
+    body3: {
+      fontSize: "1rem",
+      color:"#1a1a1a",
       fontWeight: 400
     },
     caption: {

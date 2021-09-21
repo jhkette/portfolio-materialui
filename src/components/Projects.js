@@ -43,11 +43,11 @@ const useStyles = makeStyles(theme => ({
   subHeading: {
     color: "#fff",
     paddingRight: "2rem",
-    fontFamily: "Pacifico",
+  
     display: "inline-block",
     marginBottom: "2rem",
     borderBottom: "3px solid #fff",
-    fontWeight: "100"
+    
   },
   container: {
     backgroundColor: "#2E3A59"

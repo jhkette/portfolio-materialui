@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   main: {
     position: "relative",
     top: "-65px",
+    overflow: "hidden"
   },
   estimateButton: {
     ...theme.typography.estimate,
@@ -122,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
   stripe3: {
     width: "100%",
     background:
-      "linear-gradient(to top right, #fff calc(50% - 1px),  #2377BD calc(50% + 1px) )",
+      "linear-gradient(to top right, #2E3A59 calc(50% - 1px),  #2377BD calc(50% + 1px) )",
     height: "100px",
   },
   heroTextContainer: {
@@ -133,7 +134,6 @@ const useStyles = makeStyles((theme) => ({
   },
   heroText: {
     marginLeft: "8%",
-    fontSize: "3.9rem",
     [theme.breakpoints.down("sm")]: {
       fontSize: "2.9rem",
     },
@@ -146,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
   },
   spanText: {
     display: "block",
-    fontSize: "2.55rem",
+    fontSize: "2.1rem",
     fontWeight: "500",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
@@ -234,7 +234,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
   },
   cardItem: {
-    height: "20rem",
+    height: "22rem",
     backgroundColor: "white",
     width: "14rem",
     margin: "1em",
@@ -250,12 +250,11 @@ const useStyles = makeStyles((theme) => ({
     top: "-3.5rem",
   },
   subHeading: {
-    margin: "0 2rem",
+    margin: "1rem 2rem",
     paddingRight: "2rem",
-    fontFamily: "Pacifico",
     display: "inline-block",
-    borderBottom: "3px solid #3F3F3F",
-    fontWeight: "100",
+    borderBottom: "3px solid #fff",
+
   },
 }));
 
@@ -343,10 +342,11 @@ export default function LandingPage(props) {
                 image={reptile}
                 title="Contemplative Reptile"
               />
+              </CardActionArea>
               <CardContent>
-                <Typography variant="body2">Hello</Typography>
+              <Typography variant="body3">Hello</Typography>
               </CardContent>
-            </CardActionArea>
+            
             <CardActions>
               <Button
                 size="small"
@@ -369,10 +369,11 @@ export default function LandingPage(props) {
                 image={table}
                 title="Contemplative Reptile"
               />
+              </CardActionArea>
               <CardContent>
-                <Typography variant="body2">Hello</Typography>
+              <Typography variant="body3">Hello</Typography>
               </CardContent>
-            </CardActionArea>
+            
             <CardActions>
               <Button
                 size="small"
@@ -395,10 +396,11 @@ export default function LandingPage(props) {
                 image={lights}
                 title="Contemplative Reptile"
               />
+              </CardActionArea>
               <CardContent>
-                <Typography variant="body2">Hello</Typography>
+              <Typography variant="body3">Hello</Typography>
               </CardContent>
-            </CardActionArea>
+           
             <CardActions>
               <Button
                 size="small"
@@ -421,10 +423,11 @@ export default function LandingPage(props) {
                 image={gradient}
                 title="Contemplative Reptile"
               />
+              </CardActionArea>
               <CardContent>
-                <Typography variant="body2">Hello</Typography>
+              <Typography variant="body3">Hello</Typography>
               </CardContent>
-            </CardActionArea>
+            
             <CardActions>
               <Button
                 size="small"
@@ -446,10 +449,11 @@ export default function LandingPage(props) {
                 image={lights}
                 title="Contemplative Reptile"
               />
+              </CardActionArea>
               <CardContent>
-                <Typography variant="body2">Hello</Typography>
+              <Typography variant="body3">Hello</Typography>
               </CardContent>
-            </CardActionArea>
+            
             <CardActions>
               <Button
                 size="small"
@@ -472,10 +476,11 @@ export default function LandingPage(props) {
                 image={gradient}
                 title="Contemplative Reptile"
               />
+              </CardActionArea>
               <CardContent>
-                <Typography variant="body2">Hello</Typography>
+              <Typography variant="body3">Hello</Typography>
               </CardContent>
-            </CardActionArea>
+            
             <CardActions>
               <Button
                 size="small"
@@ -497,10 +502,11 @@ export default function LandingPage(props) {
                 image={reptile}
                 title="Contemplative Reptile"
               />
+              </CardActionArea>
               <CardContent>
-                <Typography variant="body2">Hello</Typography>
+              <Typography variant="body3">Hello</Typography>
               </CardContent>
-            </CardActionArea>
+            
             <CardActions>
               <Button
                 size="small"
@@ -523,10 +529,11 @@ export default function LandingPage(props) {
                 image={table}
                 title="Contemplative Reptile"
               />
+              </CardActionArea>
               <CardContent>
-                <Typography variant="body2">Hello</Typography>
+                <Typography variant="body3">Hello</Typography>
               </CardContent>
-            </CardActionArea>
+            
             <CardActions>
               <Button
                 size="small"
