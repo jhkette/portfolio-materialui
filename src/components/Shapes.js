@@ -149,6 +149,19 @@ export default function Shapes(props) {
       >
         <img src={circle} style={{ height: "190px" }} />
       </animated.div>
+      <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "absolute",
+                left: "40%",
+                top: "5rem",
+                ...styles,
+              }}
+            >
+              <img src={arrowgrey} style={{ height: "50px" }} />
+            </animated.div>
      
       <animated.div
         style={{
@@ -217,6 +230,19 @@ export default function Shapes(props) {
       >
         <img src={triangle4} style={{ height: "90px" }}  className={classes.shape}/>
       </animated.div>
+      <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "absolute",
+                left: "41%",
+                top: "20rem",
+                ...styles,
+              }}
+            >
+              <img src={triangle} style={{ height: "240px" }} />
+            </animated.div>
       <img src={polygonDark} />
       <img
         src={triangle3}

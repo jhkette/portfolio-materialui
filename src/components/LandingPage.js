@@ -230,13 +230,13 @@ const useStyles = makeStyles((theme) => ({
   cardContainer: {
     // minHeight: "45em",
     backgroundColor: theme.palette.common.dark,
-    padding: "0rem 1rem",
+    padding: "4rem 1rem",
     position: "relative",
   },
   cardItem: {
     height: "22rem",
     backgroundColor: "white",
-    width: "14rem",
+    width: "16.5rem",
     margin: "1em",
     zIndex: "300",
     position: "relative",
@@ -253,7 +253,6 @@ const useStyles = makeStyles((theme) => ({
     margin: "1rem 2rem",
     paddingRight: "2rem",
     display: "inline-block",
-    borderBottom: "3px solid #fff",
 
   },
 }));
@@ -344,7 +343,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body3">Hello</Typography>
+              <Typography variant="body2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -371,7 +370,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body3">Hello</Typography>
+              <Typography variant="body2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -398,7 +397,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body3">Hello</Typography>
+              <Typography variant="body2">Hello</Typography>
               </CardContent>
            
             <CardActions>
@@ -425,7 +424,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body3">Hello</Typography>
+              <Typography variant="body2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -451,7 +450,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body3">Hello</Typography>
+              <Typography variant="body2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -478,7 +477,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body3">Hello</Typography>
+              <Typography variant="body2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -504,7 +503,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body3">Hello</Typography>
+              <Typography variant="body2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -531,7 +530,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-                <Typography variant="body3">Hello</Typography>
+                <Typography variant="body2">Hello</Typography>
               </CardContent>
             
             <CardActions>
