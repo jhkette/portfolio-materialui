@@ -132,7 +132,7 @@ export default function Shapes(props) {
           ...styles4,
         }}
       >
-        <img src={circle} style={{ height: "190px" }} />
+        <img src={circlesmall} style={{ height: "190px" }} />
       </animated.div>
       <animated.div
               style={{
@@ -172,7 +172,7 @@ export default function Shapes(props) {
           ...styles,
         }}
       >
-        <img src={polygon} style={{ height: "150px"}} />
+        <img src={polygonDark} style={{ height: "150px"}} />
       </animated.div>
       <animated.div
         style={{
@@ -221,13 +221,12 @@ export default function Shapes(props) {
                 justifyContent: "center",
                 alignItems: "center",
                 position: "absolute",
-                left: "36%",
-                top: "-34rem",
-                border: "1px solid red",
+                left: "46%",
+                top: "-14rem",
                 ...styles,
               }}
             >
-              <img src={polygon} style={{ height: "1440px" }} />
+              <img src={polygon} style={{ height: "1040px" }} />
           </animated.div>
       <img src={polygonDark} />
       <img

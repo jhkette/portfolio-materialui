@@ -2,9 +2,8 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="5.25in"
-   height="5.5in"
-   viewBox="0 0 133.35 133"
+  
+   viewBox="0 0 140 140"
    version="1.1"
    id="svg5"
    inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
@@ -16,7 +15,7 @@
 
   <defs
      id="defs2" />
- <g fill="none" stroke="#2c3647">
-    <path  stroke-width="3" d="M15,30A15,15,0,1,1,30,15,15,15,0,0,1,15,30ZM15,6.23A8.77,8.77,0,1,0,23.77,15,8.77,8.77,0,0,0,15,6.23Z" />
+ <g fill="#2c3647" stroke="#2c3647">
+    <path d="M15,30A15,15,0,1,1,30,15,15,15,0,0,1,15,30ZM15,6.23A8.77,8.77,0,1,0,23.77,15,8.77,8.77,0,0,0,15,6.23Z" />
   </g>
 </svg>

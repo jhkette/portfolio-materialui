@@ -146,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
   },
   spanText: {
     display: "block",
-    fontSize: "2.1rem",
+    fontSize: "2.9rem",
     fontWeight: "500",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
@@ -308,7 +308,7 @@ export default function LandingPage(props) {
       <div className={classes.stripe} />
       <Grid item className={classes.projects}>
         <Typography
-          variant="h4"
+          variant="h2"
           align="left"
           className={classes.subHeading}
           style={
@@ -333,8 +333,8 @@ export default function LandingPage(props) {
         <Grid
           container
           direction="row"
-          justifyContent={matchesSM ? "center" : "flex-start"}
-          alignItems={matchesXS ? "center" : "flex-start"}
+          justifyContent={matchesSM ? "center" : "center"}
+          alignItems={matchesXS ? "center" : "center"}
           className={classes.cardContainer}
         >
           <Card className={classes.cardItem}>
@@ -342,7 +342,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="190"
+                height="210"
                 image={reptile}
                 title="Contemplative Reptile"
               />
@@ -369,7 +369,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="190"
+                height="210"
                 image={table}
                 title="Contemplative Reptile"
               />
@@ -391,65 +391,13 @@ export default function LandingPage(props) {
             </CardActions>
           </Card>
 
+         
           <Card className={classes.cardItem}>
             <CardActionArea component={Link} to="/example">
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="190"
-                image={lights}
-                title="Contemplative Reptile"
-              />
-              </CardActionArea>
-              <CardContent>
-              <Typography variant="subtitle2">Hello</Typography>
-              </CardContent>
-           
-            <CardActions>
-              <Button
-                size="small"
-                variant="outlined"
-                color="primary"
-                component={Link}
-                to="/example"
-              >
-                View
-              </Button>
-            </CardActions>
-          </Card>
-
-          <Card className={classes.cardItem}>
-            <CardActionArea component={Link} to="/example">
-              <CardMedia
-                component="img"
-                alt="Contemplative Reptile"
-                height="190"
-                image={gradient}
-                title="Contemplative Reptile"
-              />
-              </CardActionArea>
-              <CardContent>
-              <Typography variant="subtitle2">Hello</Typography>
-              </CardContent>
-            
-            <CardActions>
-              <Button
-                size="small"
-                variant="outlined"
-                color="primary"
-                component={Link}
-                to="/example"
-              >
-                View
-              </Button>
-            </CardActions>
-          </Card>
-          <Card className={classes.cardItem}>
-            <CardActionArea component={Link} to="/example">
-              <CardMedia
-                component="img"
-                alt="Contemplative Reptile"
-                height="190"
+                height="210"
                 image={lights}
                 title="Contemplative Reptile"
               />
@@ -476,7 +424,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="190"
+                height="210"
                 image={gradient}
                 title="Contemplative Reptile"
               />
@@ -502,7 +450,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="190"
+                height="210"
                 image={reptile}
                 title="Contemplative Reptile"
               />
@@ -529,7 +477,7 @@ export default function LandingPage(props) {
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
-                height="190"
+                height="210"
                 image={table}
                 title="Contemplative Reptile"
               />
