@@ -230,13 +230,13 @@ const useStyles = makeStyles((theme) => ({
   cardContainer: {
     // minHeight: "45em",
     backgroundColor: theme.palette.common.dark,
-    padding: "4rem 1rem",
+    padding: "1rem 1rem",
     position: "relative",
   },
   cardItem: {
     height: "22rem",
     backgroundColor: "white",
-    width: "16.5rem",
+    width: "40%",
     margin: "1em",
     zIndex: "300",
     position: "relative",
@@ -250,9 +250,9 @@ const useStyles = makeStyles((theme) => ({
     top: "-3.5rem",
   },
   subHeading: {
-    margin: "1rem 2rem",
+    margin: ".5rem 2rem",
     paddingRight: "2rem",
-    display: "inline-block",
+  
 
   },
 }));
@@ -308,7 +308,7 @@ export default function LandingPage(props) {
       <div className={classes.stripe} />
       <Grid item className={classes.projects}>
         <Typography
-          variant="h2"
+          variant="h4"
           align="left"
           className={classes.subHeading}
           style={
@@ -325,6 +325,11 @@ export default function LandingPage(props) {
         >
           Projects
         </Typography>
+        <Typography
+          variant="subtitle1"
+          align="left"  style={{margin: ".5rem 2rem"}} >
+          A collection of personal and commercial projects.
+          </Typography>
         <Grid
           container
           direction="row"
@@ -343,7 +348,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+              <Typography variant="subtitle2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -370,7 +375,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+              <Typography variant="subtitle2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -397,7 +402,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+              <Typography variant="subtitle2">Hello</Typography>
               </CardContent>
            
             <CardActions>
@@ -424,7 +429,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+              <Typography variant="subtitle2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -450,7 +455,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+              <Typography variant="subtitle2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -477,7 +482,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+              <Typography variant="subtitle2">Hello</Typography>
               </CardContent>
             
             <CardActions>
@@ -503,7 +508,7 @@ export default function LandingPage(props) {
               />
               </CardActionArea>
               <CardContent>
-              <Typography variant="body2">Hello</Typography>
+              <Typography variant="subtitle1">Hello</Typography>
               </CardContent>
             
             <CardActions>

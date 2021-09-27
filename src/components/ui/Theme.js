@@ -75,7 +75,7 @@ export default createMuiTheme({
       color: 'white'
     },
     subtitle2: {
-      color: "white",
+      color: "#1a1a1a",
       fontWeight: 300,
       fontSize: "1.25rem"
     },
