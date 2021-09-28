@@ -230,13 +230,13 @@ const useStyles = makeStyles((theme) => ({
   cardContainer: {
     // minHeight: "45em",
     backgroundColor: theme.palette.common.dark,
-    padding: "1rem 1rem",
+
     position: "relative",
   },
   cardItem: {
     height: "22rem",
     backgroundColor: "white",
-    width: "40%",
+    width: "30%",
     margin: "1em",
     zIndex: "300",
     position: "relative",
@@ -333,7 +333,7 @@ export default function LandingPage(props) {
         <Grid
           container
           direction="row"
-          justifyContent={matchesSM ? "center" : "center"}
+          justifyContent={matchesSM ? "center" : "space-around"}
           alignItems={matchesXS ? "center" : "center"}
           className={classes.cardContainer}
         >

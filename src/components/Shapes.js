@@ -18,6 +18,7 @@ import triangle3 from "../assets/triangle3.svg";
 import triangle4 from "../assets/triangle4.svg";
 import arrow from "../assets/arrow.svg";
 import arrowgrey from "../assets/arrow_grey.svg";
+import squareDark from "../assets/square_dark.svg";
 import up from "../assets/up.svg";
 import square from "../assets/square.svg";
 
@@ -186,7 +187,7 @@ export default function Shapes(props) {
         }}
         
       >
-        <img src={circle} style={{ height: "1850px" }}   className={classes.shape} />
+        <img src={circle} style={{ height: "1650px" }}   className={classes.shape} />
       </animated.div>
       <animated.div
         style={{
@@ -200,7 +201,7 @@ export default function Shapes(props) {
         }} 
        
       >
-        <img src={arrow} style={{ height: "180px" }}  className={classes.shape} />
+        <img src={arrow} style={{ height: "140px" }}  className={classes.shape} />
       </animated.div>
       <animated.div
         style={{
@@ -228,6 +229,30 @@ export default function Shapes(props) {
             >
               <img src={polygon} style={{ height: "1040px" }} />
           </animated.div>
+
+          <animated.div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "absolute",
+                left: "76%",
+                top: "17rem",
+                ...styles,
+              }}
+            >
+
+          <img
+        src={squareDark}
+        style={{
+          height: "90px",
+       
+        }} 
+        
+      />
+      </animated.div>
+
+
       <img src={polygonDark} />
       <img
         src={triangle3}
