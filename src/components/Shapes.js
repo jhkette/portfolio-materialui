@@ -22,22 +22,21 @@ import squareDark from "../assets/square_dark.svg";
 import up from "../assets/up.svg";
 import square from "../assets/square.svg";
 
-
 const useStyles = makeStyles((theme) => ({
-    shapeContainer: {
-      position: "absolute",
-      width: "100%",
-      height: "45rem",
+  shapeContainer: {
+    position: "absolute",
+    width: "100%",
+    height: "45rem",
 
-      zIndex: "-100",
+    zIndex: "-100",
+  },
+  shape: {
+    display: "block",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
     },
-    shape: {
-      display: "block",
-      [theme.breakpoints.down("sm")]: {
-        display: "none"
-      }
-    }
-  }));
+  },
+}));
 
 export default function Shapes(props) {
   const classes = useStyles();
@@ -84,7 +83,6 @@ export default function Shapes(props) {
     loop: true,
   });
 
-
   return (
     <div className={classes.shapeContainer}>
       <animated.div
@@ -100,12 +98,14 @@ export default function Shapes(props) {
           zIndex: "900",
           ...styles4,
         }}
-       
       >
-        <img src={coding} style={{ height: "125px" }}  className={classes.shape} />
+        <img
+          src={coding}
+          style={{ height: "125px" }}
+          className={classes.shape}
+        />
       </animated.div>
-      
-      
+
       {/* <animated.div
         style={{
           display: "flex",
@@ -136,19 +136,19 @@ export default function Shapes(props) {
         <img src={circlesmall} style={{ height: "190px" }} />
       </animated.div>
       <animated.div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                position: "absolute",
-                left: "40%",
-                top: "5rem",
-                ...styles,
-              }}
-            >
-              <img src={arrowgrey} style={{ height: "50px" }} />
-            </animated.div>
-     
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          left: "40%",
+          top: "5rem",
+          ...styles,
+        }}
+      >
+        <img src={arrowgrey} style={{ height: "50px" }} />
+      </animated.div>
+
       <animated.div
         style={{
           display: "flex",
@@ -173,7 +173,7 @@ export default function Shapes(props) {
           ...styles,
         }}
       >
-        <img src={polygonDark} style={{ height: "150px"}} />
+        <img src={polygonDark} style={{ height: "150px" }} />
       </animated.div>
       <animated.div
         style={{
@@ -185,9 +185,12 @@ export default function Shapes(props) {
           top: "6.5rem",
           ...styles1,
         }}
-        
       >
-        <img src={circle} style={{ height: "1650px" }}   className={classes.shape} />
+        <img
+          src={circle}
+          style={{ height: "1650px" }}
+          className={classes.shape}
+        />
       </animated.div>
       <animated.div
         style={{
@@ -198,10 +201,13 @@ export default function Shapes(props) {
           left: "15%",
           top: "-4rem",
           ...styles,
-        }} 
-       
+        }}
       >
-        <img src={arrow} style={{ height: "140px" }}  className={classes.shape} />
+        <img
+          src={arrow}
+          style={{ height: "140px" }}
+          className={classes.shape}
+        />
       </animated.div>
       <animated.div
         style={{
@@ -214,44 +220,80 @@ export default function Shapes(props) {
           ...styles2,
         }}
       >
-        <img src={triangle4} style={{ height: "90px" }}  className={classes.shape}/>
+        <img
+          src={triangle4}
+          style={{ height: "90px" }}
+          className={classes.shape}
+        />
       </animated.div>
       <animated.div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                position: "absolute",
-                left: "46%",
-                top: "-14rem",
-                ...styles,
-              }}
-            >
-              <img src={polygon} style={{ height: "1040px" }} />
-          </animated.div>
-
-          <animated.div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                position: "absolute",
-                left: "76%",
-                top: "17rem",
-                ...styles,
-              }}
-            >
-
-          <img
-        src={squareDark}
         style={{
-          height: "90px",
-       
-        }} 
-        
-      />
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          left: "46%",
+          top: "-14rem",
+          ...styles,
+        }}
+      >
+        <img src={polygon} style={{ height: "740px" }} />
       </animated.div>
 
+      <animated.div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          left: "76%",
+          top: "17rem",
+          ...styles,
+        }}
+      >
+        <img
+          src={squareDark}
+          style={{
+            height: "90px",
+          }}
+        />
+      </animated.div>
+      <animated.div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          left: "76%",
+          top: "26rem",
+          ...styles,
+        }}
+      >
+        <img
+          src={polygonDark}
+          style={{
+            height: "150px",
+          }}
+        />
+      </animated.div>
+      <animated.div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          left: "55%",
+          top: "22rem",
+          ...styles,
+        }}
+      >
+
+      <img
+        src={circleplain}
+        style={{ height: "280px" }}
+        className={classes.shape}
+      />
+      </animated.div>
 
       <img src={polygonDark} />
       <img
@@ -283,13 +325,11 @@ export default function Shapes(props) {
         }}
       />
 
-      
-     
       <img
         src={polygonDark}
-        style={{ height: "290px", position: "absolute", left: "50%" }} 
+        style={{ height: "290px", position: "absolute", left: "50%" }}
       />
-     
+
       <img
         src={triangle3}
         style={{
@@ -297,12 +337,15 @@ export default function Shapes(props) {
           position: "absolute",
           left: "80%",
           top: "790px",
-        }} 
+        }}
         className={classes.shape}
       />
 
-      <img src={circleplain} style={{ height: "280px" }} className={classes.shape} />
-     
+      <img
+        src={circleplain}
+        style={{ height: "280px" }}
+        className={classes.shape}
+      />
 
       <img
         src={rectangle}

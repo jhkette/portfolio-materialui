@@ -33,6 +33,27 @@ const useStyles = makeStyles((theme) => ({
     top: "-65px",
     overflow: "hidden"
   },
+  heroContainer: {
+    backgroundColor: theme.palette.common.blue,
+  },
+  heroTextContainer: {
+    width: "100%",
+    marginBottom: "4rem",
+    position: "absolute",
+    fontSize: "3.5rem",
+  },
+  heroText: {
+    margin: "0 4%",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2.9rem",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: 0,
+      fontSize: "2.5rem",
+      textAlign: "left",
+      marginLeft: "1rem",
+    },
+  },
   estimateButton: {
     ...theme.typography.estimate,
     backgroundColor: theme.palette.common.orange,
@@ -97,9 +118,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "2em",
     },
   },
-  heroContainer: {
-    backgroundColor: theme.palette.common.blue,
-  },
+  
   shapeContainer: {
     position: "absolute",
     width: "100%",
@@ -126,28 +145,11 @@ const useStyles = makeStyles((theme) => ({
       "linear-gradient(to top right, #2E3A59 calc(50% - 1px),  #2377BD calc(50% + 1px) )",
     height: "100px",
   },
-  heroTextContainer: {
-    width: "100%",
-    marginBottom: "4rem",
-    position: "absolute",
-    fontSize: "3.5rem",
-  },
-  heroText: {
-    marginLeft: "8%",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "2.9rem",
-    },
-    [theme.breakpoints.down("xs")]: {
-      marginLeft: 0,
-      fontSize: "2.5rem",
-      textAlign: "left",
-      marginLeft: "1rem",
-    },
-  },
+ 
   spanText: {
     display: "block",
-    fontSize: "2.9rem",
-    fontWeight: "500",
+    fontSize: "2.4rem",
+    fontWeight: "200",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
     },
@@ -180,7 +182,7 @@ const useStyles = makeStyles((theme) => ({
   },
   projects: {
     backgroundColor: theme.palette.common.dark,
-    paddingBottom: "2em",
+    padding: "2rem 4%"
   },
   revolutionBackground: {
     backgroundImage: `url(${revolutionBackground})`,
@@ -237,7 +239,7 @@ const useStyles = makeStyles((theme) => ({
     height: "22rem",
     backgroundColor: "white",
     width: "30%",
-    margin: "1em",
+    margin: "1em 0",
     zIndex: "300",
     position: "relative",
   },
@@ -250,8 +252,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-3.5rem",
   },
   subHeading: {
-    margin: ".5rem 2rem",
-    paddingRight: "2rem",
+   
   
 
   },
