@@ -38,19 +38,15 @@ const useStyles = makeStyles((theme) => ({
   },
   heroTextContainer: {
     width: "100%",
-    marginBottom: "4rem",
+    marginBottom: "6rem",
     position: "absolute",
-    fontSize: "3.5rem",
+    
   },
   heroText: {
     margin: "0 4%",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "2.9rem",
-    },
+   
     [theme.breakpoints.down("xs")]: {
-      marginLeft: 0,
-      fontSize: "2.5rem",
-      textAlign: "left",
+     
       marginLeft: "1rem",
     },
   },
@@ -148,8 +144,9 @@ const useStyles = makeStyles((theme) => ({
  
   spanText: {
     display: "block",
-    fontSize: "2.4rem",
-    fontWeight: "200",
+    fontSize: "2.2rem",
+    fontWeight: "500",
+    marginTop: "2rem",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
     },
@@ -238,10 +235,15 @@ const useStyles = makeStyles((theme) => ({
   cardItem: {
     height: "22rem",
     backgroundColor: "white",
-    width: "30%",
-    margin: "1em 0",
+    width: "40%",
+    marginRight: "4rem",
+    marginBottom: "2rem",
     zIndex: "300",
     position: "relative",
+    "&:hover":{
+      transform: "translateY(-5px)",
+      transition: ".3s"
+    }
   },
   footerTransition: {
     height: "12em",
@@ -290,7 +292,7 @@ export default function LandingPage(props) {
           here the breakpoints xs */}
           <Grid xs item className={classes.heroTextContainer}>
             <Typography variant="h1" align="left" className={classes.heroText}>
-              Hello! My Name is John Doe
+              Hi, I'm John Doe
               <span className={classes.spanText}>
                 I am a junior web developer
               </span>
@@ -328,14 +330,14 @@ export default function LandingPage(props) {
         </Typography>
         <Typography
           variant="subtitle1"
-          align="left"  style={{margin: ".5rem 2rem"}} >
+          align="left"  style={{marginBottom: "1rem"}}>
           A collection of personal and commercial projects.
           </Typography>
         <Grid
           container
           direction="row"
-          justifyContent={matchesSM ? "center" : "space-around"}
-          alignItems={matchesXS ? "center" : "center"}
+          justifyContent= "flex-start"
+          alignItems="center"
           className={classes.cardContainer}
         >
           <Card className={classes.cardItem}>
@@ -446,59 +448,7 @@ export default function LandingPage(props) {
               </Button>
             </CardActions>
           </Card>
-          <Card className={classes.cardItem}>
-            <CardActionArea component={Link} to="/example">
-              <CardMedia
-                component="img"
-                alt="Contemplative Reptile"
-                height="210"
-                image={reptile}
-                title="Contemplative Reptile"
-              />
-              </CardActionArea>
-              <CardContent>
-              <Typography variant="subtitle1">Hello</Typography>
-              </CardContent>
-            
-            <CardActions>
-              <Button
-                size="small"
-                variant="outlined"
-                color="primary"
-                component={Link}
-                to="/example"
-              >
-                View
-              </Button>
-            </CardActions>
-          </Card>
-
-          <Card className={classes.cardItem}>
-            <CardActionArea component={Link} to="/example">
-              <CardMedia
-                component="img"
-                alt="Contemplative Reptile"
-                height="210"
-                image={table}
-                title="Contemplative Reptile"
-              />
-              </CardActionArea>
-              <CardContent>
-                <Typography variant="body2">Hello</Typography>
-              </CardContent>
-            
-            <CardActions>
-              <Button
-                size="small"
-                variant="outlined"
-                color="primary"
-                component={Link}
-                to="/example"
-              >
-                View
-              </Button>
-            </CardActions>
-          </Card>
+          
         </Grid>
       </Grid>
       <div className={classes.stripe2} />

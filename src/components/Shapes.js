@@ -205,7 +205,7 @@ export default function Shapes(props) {
       >
         <img
           src={arrow}
-          style={{ height: "140px" }}
+          style={{ height: "110px" }}
           className={classes.shape}
         />
       </animated.div>
